@@ -1,19 +1,18 @@
+"use client";
 import MainLayout from "./layouts/MainLayout";
 
 export default function Home() {
   return (
     <MainLayout>
-      <div className="min-h-[200vh] bg-[#000]">
-        <h1 className="text-center text-2xl font-bold pt-10">Home page</h1>
-        <p className="text-center mt-6">Scroll down to test the scrolling behavior!</p>
-        <div className="mt-10 space-y-4">
-          {Array.from({ length: 50 }, (_, i) => (
-            <p key={i} className="text-center text-black">
-              This is line {i + 1} of content.
-            </p>
-          ))}
-        </div>
-      </div>
+      <section id="section-1" className="min-h-[100vh] bg-[#000]">
+        Section 1
+      </section>
+      <section id="section-2" className="min-h-[100vh] bg-red-500">
+        Section 2
+      </section>
+      <section id="section-3" className="min-h-[100vh] bg-cyan-500">
+        Section 3
+      </section>
     </MainLayout>
   );
 }

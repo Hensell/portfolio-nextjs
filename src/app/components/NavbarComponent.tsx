@@ -1,88 +1,66 @@
-"use client"
+"use client";
+import React from "react";
 import {
   Navbar,
   NavbarBrand,
   NavbarContent,
   NavbarItem,
-  NavbarMenuToggle,
   NavbarMenu,
   NavbarMenuItem,
+  NavbarMenuToggle,
 } from "@nextui-org/navbar";
-import Link from "next/link";
-
-import React from "react";
+import { Link } from "@nextui-org/react";
+import { useActiveSection } from "../layouts/MainLayout";
 
 export default function NavbarComponent() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-
-  const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
+  const activeSection = useActiveSection();
+ const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  
+  const sections = [
+    { id: "section-1", name: "Section 1" },
+    { id: "section-2", name: "Section 2" },
+    { id: "section-3", name: "Section 3" },
   ];
 
-
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}>
-      <NavbarContent>
+    <Navbar  onMenuOpenChange={setIsMenuOpen}>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
-        <NavbarBrand>
-          <p>logo</p>
-          <p className="font-bold text-inherit">ACME</p>
-        </NavbarBrand>
-      </NavbarContent>
-
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Features
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <Link aria-current="page" href="#">
-            Customers
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Integrations
-          </Link>
-        </NavbarItem>
-      </NavbarContent>
-      <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
-        <NavbarItem>
-          <button  color="primary"  >
-            Sign Up
-          </button>
-        </NavbarItem>
+      <NavbarBrand>
+        <p>Logo</p>
+      </NavbarBrand>
+      <NavbarContent className="hidden sm:flex gap-4"  justify="center" >
+        {sections.map((section) => (
+          <NavbarItem key={section.id}>
+            <Link
+              href={`#${section.id}`}
+              className={`${
+                activeSection === section.id
+                  ? "text-blue-500 font-bold"
+                  : "text-black"
+              }`}
+            >
+              {section.name}
+            </Link>
+          </NavbarItem>
+        ))}
       </NavbarContent>
       <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              className="w-full"
-              color={
-                index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
-              }
-              href="#"
-            
-            >
-              {item}
-            </Link>
-          </NavbarMenuItem>
+        {sections.map((section) => (
+             <NavbarItem key={section.id}>
+             <Link
+               href={`#${section.id}`}
+               className={`${
+                 activeSection === section.id
+                   ? "text-blue-500 font-bold"
+                   : "text-black"
+               }`}
+             >
+               {section.name}
+             </Link>
+           </NavbarItem>
         ))}
       </NavbarMenu>
     </Navbar>
