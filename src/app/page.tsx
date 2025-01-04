@@ -3,7 +3,7 @@ import MainLayout from "./layouts/MainLayout";
 export default function Home() {
   return (
     <MainLayout>
-      <div className="min-h-[200vh] bg-gray-100">
+      <div className="min-h-[200vh] bg-[#000]">
         <h1 className="text-center text-2xl font-bold pt-10">Home page</h1>
         <p className="text-center mt-6">Scroll down to test the scrolling behavior!</p>
         <div className="mt-10 space-y-4">
