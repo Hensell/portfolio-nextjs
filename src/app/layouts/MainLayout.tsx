@@ -18,7 +18,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
     const observerOptions = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.6, // Detecta cuando el 60% de una sección está visible
+      threshold: 0.6, 
     };
 
     const observerCallback = (entries: IntersectionObserverEntry[]) => {
