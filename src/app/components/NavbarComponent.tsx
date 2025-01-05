@@ -28,7 +28,7 @@ export default function NavbarComponent() {
           className="sm:hidden"
         />
       <NavbarBrand>
-        <p>Logo</p>
+        <p>Hensell</p>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4"  justify="center" >
         {sections.map((section) => (
