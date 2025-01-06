@@ -58,7 +58,7 @@ export default function NavbarComponent() {
         {sections.map((section) => (
           <NavbarItem key={section.id}>
             <Link
-               href={section.id === 'section-1' ? '#' : `#${section.id}`}
+                  href={ `#${section.id}`}
               onPress={() => setIsMenuOpen(false)} 
               className={`${
                 activeSection === section.id
