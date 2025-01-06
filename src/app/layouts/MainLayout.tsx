@@ -43,7 +43,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
   return (
     <SectionContext.Provider value={activeSection}>
       <NavbarComponent />
-      <main>{children}</main>
+      <main className="bg-[#D8D9D4] p-[min(5em,8%)]">{children}</main>
     </SectionContext.Provider>
   );
 }
