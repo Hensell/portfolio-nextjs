@@ -32,7 +32,10 @@ export default function NavbarComponent() {
         className="sm:hidden text-black"
       />
       <NavbarBrand>
+        <Link href="#">
         <p className="text-black font-bold">Aca va el logo</p>
+        </Link>
+       
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         {sections.map((section) => (
