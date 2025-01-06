@@ -16,7 +16,7 @@ export default function NavbarComponent() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const sections = [
-    { id: "section-1", name: "About" },
+    { id: "about", name: "About" },
     { id: "projects", name: "Projects" },
     { id: "contact", name: "Contact" },
   ];
