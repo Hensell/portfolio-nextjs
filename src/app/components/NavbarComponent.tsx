@@ -17,15 +17,15 @@ export default function NavbarComponent() {
 
   const sections = [
     { id: "section-1", name: "About" },
-    { id: "section-2", name: "Projects" },
-    { id: "section-3", name: "Contact" },
+    { id: "projects", name: "Projects" },
+    { id: "contact", name: "Contact" },
   ];
 
   return (
     <Navbar
       onMenuOpenChange={(isOpen) => setIsMenuOpen(isOpen)}
       className="bg-[#D8D9D4]"
-      isMenuOpen={isMenuOpen} // Controlar manualmente el estado
+      isMenuOpen={isMenuOpen} 
     >
       <NavbarMenuToggle
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -41,7 +41,7 @@ export default function NavbarComponent() {
         {sections.map((section) => (
           <NavbarItem key={section.id}>
             <Link
-            href={section.id === 'section-1' ? '#' : `#${section.id}`}
+            href={ `#${section.id}`}
 
               className={`${
                 activeSection === section.id
