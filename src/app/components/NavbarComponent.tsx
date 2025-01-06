@@ -41,7 +41,8 @@ export default function NavbarComponent() {
         {sections.map((section) => (
           <NavbarItem key={section.id}>
             <Link
-              href={`#${section.id}`}
+            href={section.id === 'section-1' ? '#' : `#${section.id}`}
+
               className={`${
                 activeSection === section.id
                   ? "text-slate-500 font-black"
@@ -57,8 +58,8 @@ export default function NavbarComponent() {
         {sections.map((section) => (
           <NavbarItem key={section.id}>
             <Link
-              href={`#${section.id}`}
-              onPress={() => setIsMenuOpen(false)} // Asegurar el cierre del menú
+               href={section.id === 'section-1' ? '#' : `#${section.id}`}
+              onPress={() => setIsMenuOpen(false)} 
               className={`${
                 activeSection === section.id
                   ? "text-blue-500 font-bold"
