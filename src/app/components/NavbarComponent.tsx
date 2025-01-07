@@ -24,7 +24,6 @@ export default function NavbarComponent() {
   return (
     <Navbar
       onMenuOpenChange={(isOpen) => setIsMenuOpen(isOpen)}
-      className="bg-[#D8D9D4]"
       isMenuOpen={isMenuOpen} 
     >
       <NavbarMenuToggle
