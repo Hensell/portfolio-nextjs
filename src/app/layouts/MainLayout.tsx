@@ -43,7 +43,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
   return (
     <SectionContext.Provider value={activeSection}>
       <NavbarComponent />
-      <main className="bg-[#D8D9D4] px-[min(5em,8%)] space-y-12">{children}</main>
+      <main className="px-[min(5em,8%)] space-y-12 bg-gradient-to-r from-[#F6F5F2] via-[#FFEFEF] to-[#FFEFEF] bg-[length:400%_400%] animate-gradient">{children}</main>
     </SectionContext.Provider>
   );
 }

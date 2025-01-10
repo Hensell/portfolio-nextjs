@@ -23,6 +23,7 @@ export default function NavbarComponent() {
 
   return (
     <Navbar
+    className="backdrop-blur-[8px] backdrop-saturate-[100%] bg-[#ffffff] bg-opacity-0"
       onMenuOpenChange={(isOpen) => setIsMenuOpen(isOpen)}
       isMenuOpen={isMenuOpen} 
     >
