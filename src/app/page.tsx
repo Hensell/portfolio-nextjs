@@ -11,9 +11,7 @@ export default function Home() {
       >
         <div className="bg-[#EDEBE6] p-5 md:p-16 rounded-3xl shadow-lg mr-0 md:mr-5">
           <h1 className="text-[clamp(1rem,calc(5vw+0.8rem),2.5rem)] text-[#1C1C1C] text-center md:text-left">
-            <span className="font-black">Hensell </span>
-            is a Full Stack Developer creating seamless web and mobile
-            experiences with modern technologies
+            <span className="font-black">Hensell </span>is a Full Stack Developer crafting dynamic web and mobile solutions!
           </h1>
         </div>
 
