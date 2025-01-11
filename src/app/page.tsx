@@ -17,9 +17,9 @@ export default function Home() {
         </div>
 
         <dl className=" text-gray-900 bg-[#f1e8b8] p-5 md:p-16 rounded-3xl shadow-sm">
-          {questions.map((e) => {
+          {questions.map((e, i) => {
             return (
-              <div className="flex flex-col pb-3">
+              <div key={i} className="flex flex-col pb-3">
                 <dt className="mb-1 text-gray-500 text-lg font-light">
                   {e.question}
                 </dt>
