@@ -1,5 +1,4 @@
 "use client";
-import { Accordion, Content, Tab, Trigger } from "./components/accordion";
 import MainLayout from "./layouts/MainLayout";
 
 export default function Home() {
@@ -7,37 +6,28 @@ export default function Home() {
     <MainLayout>
       <section
         id="about"
-        className="scroll-mt-[80px] gap-4 grid grid-cols-1 md:grid-cols-3"
+        className="scroll-mt-[80px] flex flex-col lg:flex-row gap-4 mt-8"
       >
-        <div className="mr-0 md:mr-5 md:col-span-2 md:row-span-1">
-          <div className="p-5 md:p-16 bg-[#EDEBE6] shadow-lg mb-8 rounded-3xl">
-            <h1 className="text-[clamp(1rem,calc(5vw+0.8rem),2.5rem)] text-[#1C1C1C] text-center md:text-left">
-              <span className="font-black">Hensell </span>
-              is a Full Stack Developer creating seamless web and mobile
-              experiences with modern technologies
-            </h1>
-          </div>
+        <div className="bg-[#f1e8b8] p-5 md:p-16 rounded-3xl shadow-sm mr-0 md:mr-5  w-full lg:w-[85%]">
+          <h1 className="text-[clamp(1rem,calc(2vw+0.8rem),3.5rem)] text-[#1C1C1C] text-center lg:text-left">
+            <span className="font-black">Hensell </span>
+            is a Full Stack Developer creating seamless web and mobile
+            experiences with modern technologies
+          </h1>
         </div>
 
-        <div className=" text-black bg-[#EDEBE6] p-5 md:p-16 rounded-3xl shadow-lg md:col-span-1 md:row-span-1">
-          <div className="w-full">
-            <Accordion>
-              {questions.map((e, i) => {
-                return (
-                  <Tab key={i}>
-                    <Trigger>
-                      <p className="font-bold">{e.question}</p>
-                    </Trigger>
-                    <Content>{e.answer}</Content>
-                  </Tab>
-                );
-              })}
-            </Accordion>
-          </div>
-        </div>
-        <div className="bg-[#EDEBE6] p-5 md:p-16 rounded-3xl shadow-lg md:col-span-1 md:row-span-1 h-96">
-            Hola
-          </div>
+        <dl className=" text-gray-900 bg-[#f1e8b8] p-5 md:p-16 rounded-3xl shadow-sm">
+          {questions.map((e, i) => {
+            return (
+              <div className="flex flex-col pb-3">
+                <dt className="mb-1 text-gray-500 text-lg font-light">
+                  {e.question}
+                </dt>
+                <dd className="text-lg font-thin mb-5">{e.answer}</dd>
+              </div>
+            );
+          })}
+        </dl>
       </section>
 
       <section
@@ -66,7 +56,6 @@ const questions = [
     question: "What are your preferred technologies?",
     answer: "React, Next.js, Flutter, and Node.js (with Express and NestJS).",
   },
-
   {
     question: "What projects have you worked on?",
     answer:
