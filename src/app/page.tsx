@@ -9,6 +9,7 @@ export default function Home() {
         id="about"
         className="scroll-mt-[80px] gap-4 grid grid-cols-1 md:grid-cols-3"
       >
+<<<<<<< HEAD
         <div className="mr-0 md:mr-5 md:col-span-2 md:row-span-1">
           <div className="p-5 md:p-16 bg-[#EDEBE6] shadow-lg mb-8 rounded-3xl">
             <h1 className="text-[clamp(1rem,calc(5vw+0.8rem),2.5rem)] text-[#1C1C1C] text-center md:text-left">
@@ -17,6 +18,12 @@ export default function Home() {
               experiences with modern technologies
             </h1>
           </div>
+=======
+        <div className="bg-[#EDEBE6] p-5 md:p-16 rounded-3xl shadow-lg mr-0 md:mr-5">
+          <h1 className="text-[clamp(1rem,calc(5vw+0.8rem),2.5rem)] text-[#1C1C1C] text-center md:text-left">
+            <span className="font-black">Hensell </span>is a Full Stack Developer crafting dynamic web and mobile solutions!
+          </h1>
+>>>>>>> 9c7c14fe54cc9fad9822a66528b91f634abce455
         </div>
 
         <div className=" text-black bg-[#EDEBE6] p-5 md:p-16 rounded-3xl shadow-lg md:col-span-1 md:row-span-1">
