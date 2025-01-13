@@ -10,6 +10,8 @@ import {
 } from "@nextui-org/navbar";
 import { Link } from "@nextui-org/react";
 import { useActiveSection } from "../layouts/MainLayout";
+import { ModeToggle } from "./modeToggle";
+
 
 export default function NavbarComponent() {
   const activeSection = useActiveSection();
@@ -23,30 +25,32 @@ export default function NavbarComponent() {
 
   return (
     <Navbar
-    className="backdrop-blur-[8px] backdrop-saturate-[100%] bg-[#ffffff] bg-opacity-0"
+      className="backdrop-blur-[8px] backdrop-saturate-[100%] bg-[#ffffff] bg-opacity-0"
       onMenuOpenChange={(isOpen) => setIsMenuOpen(isOpen)}
-      isMenuOpen={isMenuOpen} 
+      isMenuOpen={isMenuOpen}
     >
       <NavbarMenuToggle
         aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        className="sm:hidden text-black"
+        className="sm:hidden"
       />
       <NavbarBrand>
         <Link href="#">
-        <p className="text-black font-bold">Aca va el logo</p>
+          <p className="font-bold mr-5">Aca va el logo</p>
         </Link>
-       
+
+        <ModeToggle />
       </NavbarBrand>
+
+    
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         {sections.map((section) => (
           <NavbarItem key={section.id}>
             <Link
-            href={ `#${section.id}`}
-
+              href={`#${section.id}`}
               className={`${
                 activeSection === section.id
-                  ? "text-slate-500 font-black"
-                  : "text-black font-medium"
+                  ? "font-black"
+                  : "font-medium"
               }`}
             >
               {section.name}
@@ -58,12 +62,12 @@ export default function NavbarComponent() {
         {sections.map((section) => (
           <NavbarItem key={section.id}>
             <Link
-                  href={ `#${section.id}`}
-              onPress={() => setIsMenuOpen(false)} 
+              href={`#${section.id}`}
+              onPress={() => setIsMenuOpen(false)}
               className={`${
                 activeSection === section.id
-                  ? "text-blue-500 font-bold"
-                  : "text-black"
+                  ? "font-bold"
+                  : "font-medium"
               }`}
             >
               {section.name}

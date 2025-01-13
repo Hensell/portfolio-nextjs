@@ -8,22 +8,22 @@ export default function Home() {
         id="about"
         className="scroll-mt-[80px] flex flex-col lg:flex-row gap-4 mt-8"
       >
-        <div className="bg-[#ECF2CB] p-5 md:p-16 rounded-3xl shadow-sm mr-0 md:mr-5  w-full lg:w-[85%]">
-          <h1 className="text-[clamp(1rem,calc(2vw+0.8rem),3.5rem)] text-[#2D3308] text-center lg:text-left">
+        <div className="bg-card p-5 md:p-16 rounded-3xl shadow-sm mr-0 md:mr-5  w-full lg:w-[85%]">
+          <h1 className="text-[clamp(1rem,calc(2vw+0.8rem),3.5rem)]  text-center lg:text-left">
             <span className="font-black">Hensell </span>
             is a Full Stack Developer creating seamless web and mobile
             experiences with modern technologies
           </h1>
         </div>
 
-        <dl className=" text-[#2D3308] bg-[#ECF2CB] p-5 md:p-16 rounded-3xl shadow-sm">
+        <dl className="bg-card p-5 md:p-16 rounded-3xl shadow-sm">
           {questions.map((e, i) => {
             return (
               <div key={i} className="flex flex-col pb-3">
-                <dt className="mb-1 text-gray-500 text-lg font-light">
+                <dt className="mb-1 text-xl font-black">
                   {e.question}
                 </dt>
-                <dd className="text-lg font-thin mb-5">{e.answer}</dd>
+                <dd className="text-medium font-thin mb-5">{e.answer}</dd>
               </div>
             );
           })}
