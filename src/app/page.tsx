@@ -1,4 +1,5 @@
 "use client";
+import CustomCard from "./components/card";
 import MainLayout from "./layouts/MainLayout";
 
 export default function Home() {
@@ -9,21 +10,18 @@ export default function Home() {
         className="scroll-mt-[80px] flex flex-col lg:flex-row gap-4 mt-8"
       >
         <div className="bg-card p-5 md:p-16 rounded-3xl shadow-sm mr-0 md:mr-5  w-full lg:w-[85%]">
-        <h1 className="text-[clamp(1rem,calc(1.8vw+0.8rem),3.5rem)] text-center lg:text-left">
-  <span className="font-black">Hi, I’m Hensell! </span>
-  I’m a passionate Full Stack Developer creating amazing web and mobile
-  experiences with cutting-edge technologies.
-</h1>
-
+          <h1 className="text-[clamp(1rem,calc(1.8vw+0.8rem),3.5rem)] text-center lg:text-left">
+            <span className="font-black">Hi, I’m Hensell! </span>
+            I’m a passionate Full Stack Developer creating amazing web and
+            mobile experiences with cutting-edge technologies.
+          </h1>
         </div>
 
         <dl className="bg-card p-5 md:p-16 rounded-3xl shadow-sm">
           {questions.map((e, i) => {
             return (
               <div key={i} className="flex flex-col pb-3">
-                <dt className="mb-1 text-xl font-black">
-                  {e.question}
-                </dt>
+                <dt className="mb-1 text-xl font-black">{e.question}</dt>
                 <dd className="text-medium font-thin mb-5">{e.answer}</dd>
               </div>
             );
@@ -33,10 +31,11 @@ export default function Home() {
 
       <section
         id="projects"
-        className="min-h-[100vh] bg-red-500 scroll-mt-[80px]"
+        className="min-h-[100vh] scroll-mt-[80px] flex justify-center items-center"
       >
-        Section 2
+        <CustomCard />
       </section>
+
       <section
         id="contact"
         className="min-h-[100vh] bg-cyan-500 scroll-mt-[80px]"
