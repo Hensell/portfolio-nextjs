@@ -1,7 +1,7 @@
 "use client";
-import CustomCard from "./components/card";
-import MainLayout from "./layouts/MainLayout";
 import { DrawerProjects } from "./components/drawer";
+import MainLayout from "./layouts/MainLayout";
+
 
 
 export default function Home() {
@@ -21,12 +21,21 @@ export default function Home() {
         id="projects"
         className="min-h-[100vh] scroll-mt-[80px] flex justify-center items-center"
       >
-   <CustomCard
-      footer={<p>Hentree</p>}
-      imageUrl="/image.jpg"
-     navigateTo="/hentree"
-    />
-    <DrawerProjects/>
+   
+   <DrawerProjects
+  triggerProps={{
+    footer: <p>Mi Proyecto</p>,
+    imageUrl: "/image.jpg",
+  }}
+  title="Personalizar Objetivo"
+  description="Establece tu meta diaria personalizada."
+  content={
+    <div>
+      <p>Contenido dinámico para este drawer.</p>
+    </div>
+  }
+/>
+
       </section>
 
       <section id="contact" className="scroll-mt-[80px]">
