@@ -25,9 +25,9 @@ export function DrawerProjects() {
   }
 
   return (
-    <Drawer>
+    <Drawer >
       <DrawerTrigger asChild>
-        <Button variant="ghost">Open Drawer</Button>
+        <Button variant="outline">Open Drawer</Button>
       </DrawerTrigger>
       <DrawerContent>
         <div className="mx-auto w-full max-w-sm">
