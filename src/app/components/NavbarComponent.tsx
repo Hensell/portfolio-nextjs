@@ -9,12 +9,11 @@ import {
   NavbarMenuToggle,
 } from "@nextui-org/navbar";
 import { Link } from "@nextui-org/react";
-import { useActiveSection } from "../layouts/MainLayout";
 import { ModeToggle } from "./modeToggle";
 
 
 export default function NavbarComponent() {
-  const activeSection = useActiveSection();
+
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const sections = [
@@ -34,7 +33,7 @@ export default function NavbarComponent() {
         className="sm:hidden"
       />
       <NavbarBrand>
-        <Link href="#">
+        <Link href="/">
           <p className="font-bold mr-5">Aca va el logo</p>
         </Link>
 
@@ -46,12 +45,8 @@ export default function NavbarComponent() {
         {sections.map((section) => (
           <NavbarItem key={section.id}>
             <Link
-              href={`#${section.id}`}
-              className={`${
-                activeSection === section.id
-                  ? "font-black"
-                  : "font-medium"
-              }`}
+              href={`/#${section.id}`}
+              className="font-medium"
             >
               {section.name}
             </Link>
@@ -62,13 +57,9 @@ export default function NavbarComponent() {
         {sections.map((section) => (
           <NavbarItem key={section.id}>
             <Link
-              href={`#${section.id}`}
+              href={`/#${section.id}`}
               onPress={() => setIsMenuOpen(false)}
-              className={`${
-                activeSection === section.id
-                  ? "font-bold"
-                  : "font-medium"
-              }`}
+              className="font-medium"
             >
               {section.name}
             </Link>

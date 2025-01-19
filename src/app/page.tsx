@@ -1,21 +1,41 @@
 "use client";
 import CustomCard from "./components/card";
 import MainLayout from "./layouts/MainLayout";
+import { DrawerProjects } from "./components/drawer";
+
 
 export default function Home() {
   return (
     <MainLayout>
+      <section id="about" className="h-96 flex flex-col justify-end">
+        <h1 className="text-[clamp(1rem,calc(5vw+2rem),5rem)] font-bold text-center md:text-left">
+          Hensell
+        </h1>
+        <p className="text-[clamp(1rem,calc(1.8vw+0.8rem),3.5rem)] text-center md:text-left font-light">
+          I’m a passionate Full Stack Developer creating amazing web and mobile
+          experiences with cutting-edge technologies.
+        </p>
+      </section>
+
       <section
-        id="about"
-        className="scroll-mt-[80px] flex flex-col lg:flex-row gap-4 mt-8"
+        id="projects"
+        className="min-h-[100vh] scroll-mt-[80px] flex justify-center items-center"
       >
-        <div className="bg-card p-5 md:p-16 rounded-3xl shadow-sm mr-0 md:mr-5  w-full lg:w-[85%]">
-          <h1 className="text-[clamp(1rem,calc(1.8vw+0.8rem),3.5rem)] text-center lg:text-left">
-            <span className="font-black">Hi, I’m Hensell! </span>
-            I’m a passionate Full Stack Developer creating amazing web and
-            mobile experiences with cutting-edge technologies.
-          </h1>
+   <CustomCard
+      footer={<p>Hentree</p>}
+      imageUrl="/image.jpg"
+     navigateTo="/hentree"
+    />
+    <DrawerProjects/>
+      </section>
+
+      <section id="contact" className="scroll-mt-[80px]">
+        <div>
+          <h2 className="text-4xl font-bold text-center py-10">Contact</h2>
+          aca van los links ejej
         </div>
+
+        <h2 className="text-4xl font-bold text-center py-10">FAQ</h2>
 
         <dl className="bg-card p-5 md:p-16 rounded-3xl shadow-sm">
           {questions.map((e, i) => {
@@ -27,20 +47,6 @@ export default function Home() {
             );
           })}
         </dl>
-      </section>
-
-      <section
-        id="projects"
-        className="min-h-[100vh] scroll-mt-[80px] flex justify-center items-center"
-      >
-        <CustomCard />
-      </section>
-
-      <section
-        id="contact"
-        className="min-h-[100vh] bg-cyan-500 scroll-mt-[80px]"
-      >
-        Section 3
       </section>
     </MainLayout>
   );
