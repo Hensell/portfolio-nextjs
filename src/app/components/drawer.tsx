@@ -1,10 +1,9 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { Minus, Plus } from "lucide-react"
+import * as React from "react";
+import { Minus, Plus } from "lucide-react";
 
-
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import {
   Drawer,
   DrawerClose,
@@ -14,8 +13,8 @@ import {
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
-} from "@/components/ui/drawer"
-import CustomCard from "./card"
+} from "@/components/ui/drawer";
+
 
 const data = [
   {
@@ -57,21 +56,19 @@ const data = [
   {
     goal: 349,
   },
-]
+];
 
 export function DrawerProjects() {
-  const [goal, setGoal] = React.useState(350)
+  const [goal, setGoal] = React.useState(350);
 
   function onClick(adjustment: number) {
-    setGoal(Math.max(200, Math.min(400, goal + adjustment)))
+    setGoal(Math.max(200, Math.min(400, goal + adjustment)));
   }
 
   return (
     <Drawer>
       <DrawerTrigger asChild>
         <Button variant="ghost">Open Drawer</Button>
-
-   
       </DrawerTrigger>
       <DrawerContent>
         <div className="mx-auto w-full max-w-sm">
@@ -110,9 +107,7 @@ export function DrawerProjects() {
                 <span className="sr-only">Increase</span>
               </Button>
             </div>
-            <div className="mt-3 h-[120px]">
-          hola
-            </div>
+            <div className="mt-3 h-[120px]">hola</div>
           </div>
           <DrawerFooter>
             <Button>Submit</Button>
@@ -123,5 +118,5 @@ export function DrawerProjects() {
         </div>
       </DrawerContent>
     </Drawer>
-  )
+  );
 }
