@@ -17,7 +17,7 @@ const CustomCard: React.FC<CustomCardProps> = ({ footer, imageUrl, onClick }) =>
         backgroundPosition: "center",
       }}
     >
-      <div className="backdrop-blur-sm backdrop-saturate-[111%] bg-white bg-opacity-20 p-4 rounded-lg absolute bottom-0 w-full z-10 flex justify-items-center items-center">
+      <div className="backdrop-blur-sm backdrop-saturate-[111%] bg-blur  p-4 rounded-b-lg absolute bottom-0 w-full z-10 flex justify-items-center items-center">
         <p className="font-semibold">{footer}</p>
       </div>
     </div>
