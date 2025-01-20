@@ -2,8 +2,6 @@
 import { DrawerProjects } from "./components/drawer";
 import MainLayout from "./layouts/MainLayout";
 
-
-
 export default function Home() {
   return (
     <MainLayout>
@@ -21,21 +19,19 @@ export default function Home() {
         id="projects"
         className="min-h-[100vh] scroll-mt-[80px] flex justify-center items-center"
       >
-   
-   <DrawerProjects
-  triggerProps={{
-    footer: <p>Mi Proyecto</p>,
-    imageUrl: "/image.jpg",
-  }}
-  title="Personalizar Objetivo"
-  description="Establece tu meta diaria personalizada."
-  content={
-    <div>
-      <p>Contenido dinámico para este drawer.</p>
-    </div>
-  }
-/>
-
+        <DrawerProjects
+          triggerProps={{
+            footer: "Mi Proyecto",
+            imageUrl: "/image.jpg",
+          }}
+          title="Personalizar Objetivo"
+          description="Establece tu meta diaria personalizada."
+          content={
+            <div>
+              <p>Contenido dinámico para este drawer.</p>
+            </div>
+          }
+        />
       </section>
 
       <section id="contact" className="scroll-mt-[80px]">
