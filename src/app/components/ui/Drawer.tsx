@@ -30,8 +30,6 @@ export function DrawerProjects({
   description,
   content,
 }: DrawerProjectsProps) {
-  
-
   return (
     <Drawer>
       <DrawerTrigger asChild>
@@ -47,13 +45,14 @@ export function DrawerProjects({
             <DrawerDescription>{description}</DrawerDescription>
           </DrawerHeader>
 
-          <div className="p-4 pb-0">
-            {content}
-            <div
-              className="rounded-3xl w-min-sm h-40 bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: `url(${triggerProps.imageUrl})` }}
-            ></div>
+          <div
+            className="rounded-xl relative p-6  bg-cover bg-center bg-no-repeat "
+            style={{ backgroundImage: `url(${triggerProps.imageUrl})` }}
+          >
+            <div className="rounded-xl absolute inset-0 backdrop-blur-[4px] backdrop-saturate-[100%] bg-[#ffffff] bg-opacity-5"></div>
+            <div className="relative z-10">{content}</div>
           </div>
+
           <DrawerFooter>
             <DrawerClose asChild>
               <Button variant="outline">Close</Button>

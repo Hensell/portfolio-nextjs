@@ -7,8 +7,8 @@ import {
   NavbarItem,
   NavbarMenu,
   NavbarMenuToggle,
-} from "@nextui-org/navbar";
-import { Link } from "@nextui-org/react";
+} from "@heroui/navbar";
+import { Link } from "@heroui/react";
 import { ModeToggle } from "../ui/ModeToggle";
 
 

@@ -1,11 +1,16 @@
 "use client";
 import { DrawerProjects } from "./components/ui/Drawer";
 import MainLayout from "./components/layout/MainLayout";
+import { Icon } from "@iconify/react";
+import { Button } from "@heroui/button";
 
 export default function Home() {
   return (
     <MainLayout>
-      <section id="about" className="h-96 flex flex-col justify-end">
+      <section
+        id="about"
+        className="min-h-[90vh] flex flex-col sm:justify-end justify-center sm:pb-20 "
+      >
         <h1 className="text-[clamp(1rem,calc(5vw+2rem),5rem)] font-bold text-center md:text-left">
           Hensell
         </h1>
@@ -17,8 +22,13 @@ export default function Home() {
 
       <section
         id="projects"
-        className="min-h-[100vh] scroll-mt-[80px] flex justify-center items-center"
+        className="scroll-mt-[80px] "
       >
+        <h2 className="text-[clamp(0.5rem,calc(2.5vw+1rem),2.5rem)] font-bold text-center md:text-left mb-10">
+          Projects
+        </h2>
+
+        <div className="flex justify-center items-center flex-wrap gap-5">
         <DrawerProjects
           triggerProps={{
             footer: "Link Tree",
@@ -28,10 +38,78 @@ export default function Home() {
           description="Es un clon de LinkTree hecho con React y TypeScript."
           content={
             <div>
-              <a href="https://react-hentree.pages.dev/" target="_blank">Click para verlo</a>
+              <div className="flex flex-wrap mb-5">
+                <Button isIconOnly aria-label="Like">
+                  <Icon icon="ri:nextjs-fill" width="48" height="48" />
+                </Button>
+              </div>
+              <Button
+                as="a"
+                href="https://react-hentree.pages.dev/"
+                target="_blank"
+                className="bg-card rounded-3xl"
+              >
+                Click to see it
+              </Button>
             </div>
           }
         />
+
+<DrawerProjects
+          triggerProps={{
+            footer: "Link Tree",
+            imageUrl: "/image.jpg",
+          }}
+          title="HenTree clon de LinkTree"
+          description="Es un clon de LinkTree hecho con React y TypeScript."
+          content={
+            <div>
+              <div className="flex flex-wrap mb-5">
+                <Button isIconOnly aria-label="Like">
+                  <Icon icon="ri:nextjs-fill" width="48" height="48" />
+                </Button>
+              </div>
+              <Button
+                as="a"
+                href="https://react-hentree.pages.dev/"
+                target="_blank"
+                className="bg-card rounded-3xl"
+              >
+                Click to see it
+              </Button>
+            </div>
+          }
+        />
+                <DrawerProjects
+          triggerProps={{
+            footer: "Link Tree",
+            imageUrl: "/image.jpg",
+          }}
+          title="HenTree clon de LinkTree"
+          description="Es un clon de LinkTree hecho con React y TypeScript."
+          content={
+            <div>
+              <div className="flex flex-wrap mb-5">
+                <Button isIconOnly aria-label="Like">
+                  <Icon icon="ri:nextjs-fill" width="48" height="48" />
+                </Button>
+              </div>
+              <Button
+                as="a"
+                href="https://react-hentree.pages.dev/"
+                target="_blank"
+                className="bg-card rounded-3xl"
+              >
+                Click to see it
+              </Button>
+            </div>
+          }
+        />
+
+        </div>
+      
+
+
       </section>
 
       <section id="contact" className="scroll-mt-[80px]">
@@ -41,7 +119,7 @@ export default function Home() {
         </div>
 
         <h2 className="text-4xl font-bold text-center py-10">FAQ</h2>
-      
+
         <dl className="bg-card p-5 md:p-16 rounded-3xl shadow-sm">
           {questions.map((e, i) => {
             return (
