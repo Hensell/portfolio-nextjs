@@ -3,13 +3,23 @@ import { DrawerProjects } from "./components/ui/Drawer";
 import MainLayout from "./components/layout/MainLayout";
 import { Icon } from "@iconify/react";
 import { Button } from "@heroui/button";
+import SubTitle from "./components/ui/Title";
+import { Accordion, Tab, Trigger, Content } from "./components/ui/Accordion";
+import { toast, Toaster } from "sonner";
+
+const copyToClipboard = () => {
+  const email = "hensell104@gmail.com";
+  navigator.clipboard.writeText(email).then(() => {
+    toast("Email copied to clipboard!");
+  });
+};
 
 export default function Home() {
   return (
     <MainLayout>
       <section
         id="about"
-        className="min-h-[90vh] flex flex-col sm:justify-end justify-center sm:pb-20 "
+        className="min-h-[90vh] flex flex-col  justify-center pb-16"
       >
         <h1 className="text-[clamp(1rem,calc(5vw+2rem),5rem)] font-bold text-center md:text-left">
           Hensell
@@ -20,116 +30,136 @@ export default function Home() {
         </p>
       </section>
 
-      <section
-        id="projects"
-        className="scroll-mt-[80px] "
-      >
-        <h2 className="text-[clamp(0.5rem,calc(2.5vw+1rem),2.5rem)] font-bold text-center md:text-left mb-10">
-          Projects
-        </h2>
-
-        <div className="flex justify-center items-center flex-wrap gap-5">
-        <DrawerProjects
-          triggerProps={{
-            footer: "Link Tree",
-            imageUrl: "/image.jpg",
-          }}
-          title="HenTree clon de LinkTree"
-          description="Es un clon de LinkTree hecho con React y TypeScript."
-          content={
-            <div>
-              <div className="flex flex-wrap mb-5">
-                <Button isIconOnly aria-label="Like">
-                  <Icon icon="ri:nextjs-fill" width="48" height="48" />
+      <section id="projects" className="scroll-mt-[80px] ">
+        <SubTitle text="Projects" />
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 items-center justify-center">
+          <DrawerProjects
+            triggerProps={{
+              footer: "Link Tree",
+              imageUrl: "/image.jpg",
+            }}
+            title="HenTree clon de LinkTree"
+            description="Es un clon de LinkTree hecho con React y TypeScript."
+            content={
+              <div>
+                <div className="flex flex-wrap mb-5">
+                  <Button isIconOnly aria-label="Like">
+                    <Icon icon="ri:nextjs-fill" width="48" height="48" />
+                  </Button>
+                </div>
+                <Button
+                  as="a"
+                  href="https://react-hentree.pages.dev/"
+                  target="_blank"
+                  className="bg-card rounded-3xl"
+                >
+                  Click to see it
                 </Button>
               </div>
-              <Button
-                as="a"
-                href="https://react-hentree.pages.dev/"
-                target="_blank"
-                className="bg-card rounded-3xl"
-              >
-                Click to see it
-              </Button>
-            </div>
-          }
-        />
+            }
+          />
 
-<DrawerProjects
-          triggerProps={{
-            footer: "Link Tree",
-            imageUrl: "/image.jpg",
-          }}
-          title="HenTree clon de LinkTree"
-          description="Es un clon de LinkTree hecho con React y TypeScript."
-          content={
-            <div>
-              <div className="flex flex-wrap mb-5">
-                <Button isIconOnly aria-label="Like">
-                  <Icon icon="ri:nextjs-fill" width="48" height="48" />
+          <DrawerProjects
+            triggerProps={{
+              footer: "Link Tree",
+              imageUrl: "/image.jpg",
+            }}
+            title="HenTree clon de LinkTree"
+            description="Es un clon de LinkTree hecho con React y TypeScript."
+            content={
+              <div>
+                <div className="flex flex-wrap mb-5">
+                  <Button isIconOnly aria-label="Like">
+                    <Icon icon="ri:nextjs-fill" width="48" height="48" />
+                  </Button>
+                </div>
+                <Button
+                  as="a"
+                  href="https://react-hentree.pages.dev/"
+                  target="_blank"
+                  className="bg-card rounded-3xl"
+                >
+                  Click to see it
                 </Button>
               </div>
-              <Button
-                as="a"
-                href="https://react-hentree.pages.dev/"
-                target="_blank"
-                className="bg-card rounded-3xl"
-              >
-                Click to see it
-              </Button>
-            </div>
-          }
-        />
-                <DrawerProjects
-          triggerProps={{
-            footer: "Link Tree",
-            imageUrl: "/image.jpg",
-          }}
-          title="HenTree clon de LinkTree"
-          description="Es un clon de LinkTree hecho con React y TypeScript."
-          content={
-            <div>
-              <div className="flex flex-wrap mb-5">
-                <Button isIconOnly aria-label="Like">
-                  <Icon icon="ri:nextjs-fill" width="48" height="48" />
-                </Button>
-              </div>
-              <Button
-                as="a"
-                href="https://react-hentree.pages.dev/"
-                target="_blank"
-                className="bg-card rounded-3xl"
-              >
-                Click to see it
-              </Button>
-            </div>
-          }
-        />
-
+            }
+          />
+          <div className="md:col-span-2 col-span-1">
+            <DrawerProjects
+              triggerProps={{
+                footer: "Link Tree",
+                imageUrl: "/image.jpg",
+              }}
+              title="HenTree clon de LinkTree"
+              description="Es un clon de LinkTree hecho con React y TypeScript."
+              content={
+                <div>
+                  <div className="flex flex-wrap mb-5">
+                    <Button isIconOnly aria-label="Like">
+                      <Icon icon="ri:nextjs-fill" width="48" height="48" />
+                    </Button>
+                  </div>
+                  <Button
+                    as="a"
+                    href="https://react-hentree.pages.dev/"
+                    target="_blank"
+                    className="bg-card rounded-3xl"
+                  >
+                    Click to see it
+                  </Button>
+                </div>
+              }
+            />
+          </div>
         </div>
-      
-
-
       </section>
 
-      <section id="contact" className="scroll-mt-[80px]">
+      <section id="contact" className="scroll-mt-[80px] pb-28">
         <div>
-          <h2 className="text-4xl font-bold text-center py-10">Contact</h2>
-          aca van los links ejej
+        <Toaster  position="top-right" />
+          <SubTitle text="Contact" />
+          <div className="flex flex-row space-x-5 items-center justify-center">
+            <Button
+              as="a"
+              href="https://github.com/Hensell"
+              target="_blank"
+              variant="shadow"
+              isIconOnly
+              className="backdrop-blur-[4px] backdrop-saturate-[100%] bg-gray-700 bg-opacity-50"
+            >
+              <Icon icon="mdi:github" width="24" height="24" />
+            </Button>
+            
+            <Button
+              onPress={copyToClipboard}
+              variant="shadow"
+              isIconOnly
+              className="backdrop-blur-[4px] backdrop-saturate-[100%] bg-gray-700 bg-opacity-50"
+            >
+              <Icon icon="material-symbols:mail" width="24" height="24" />
+            </Button>
+            <Button
+              as="a"
+              href="https://www.linkedin.com/in/hensell-espinoza-a2b473125/"
+              target="_blank"
+              variant="shadow"
+              isIconOnly
+              className="backdrop-blur-[4px] backdrop-saturate-[100%] bg-gray-700 bg-opacity-50"
+            >
+              <Icon icon="mdi:linkedin" width="24" height="24" />
+            </Button>
+          </div>
         </div>
 
-        <h2 className="text-4xl font-bold text-center py-10">FAQ</h2>
-
-        <dl className="bg-card p-5 md:p-16 rounded-3xl shadow-sm">
-          {questions.map((e, i) => {
-            return (
-              <div key={i} className="flex flex-col pb-3">
-                <dt className="mb-1 text-xl font-black">{e.question}</dt>
-                <dd className="text-medium font-thin mb-5">{e.answer}</dd>
-              </div>
-            );
-          })}
-        </dl>
+        <SubTitle text="FAQ" />
+        <Accordion className=" mx-auto bg-card rounded-3xl shadow-sm">
+          {questions.map((item, index) => (
+            <Tab key={index}>
+              <Trigger className="font-black">{item.question}</Trigger>
+              <Content className="text-[foreground]">{item.answer}</Content>
+            </Tab>
+          ))}
+        </Accordion>
       </section>
     </MainLayout>
   );

@@ -46,7 +46,7 @@ export function DrawerProjects({
           </DrawerHeader>
 
           <div
-            className="rounded-xl relative p-6  bg-cover bg-center bg-no-repeat "
+            className="rounded-xl relative p-6  bg-cover bg-center bg-no-repeat mx-6"
             style={{ backgroundImage: `url(${triggerProps.imageUrl})` }}
           >
             <div className="rounded-xl absolute inset-0 backdrop-blur-[4px] backdrop-saturate-[100%] bg-[#ffffff] bg-opacity-5"></div>

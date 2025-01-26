@@ -10,7 +10,7 @@ const CustomCard: React.FC<CustomCardProps> = ({ footer, imageUrl, onClick }) =>
   return (
     <div
       onClick={onClick}
-      className="relative rounded-lg overflow-hidden shadow-lg min-h-[300px] min-w-[300px] cursor-pointer"
+      className="relative rounded-lg overflow-hidden shadow-lg min-h-[250px] min-w-[300px] cursor-pointer"
       style={{
         backgroundImage: `url(${imageUrl})`,
         backgroundSize: "cover",
