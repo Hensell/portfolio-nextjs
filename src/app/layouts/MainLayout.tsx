@@ -3,17 +3,11 @@
 import NavbarComponent from "../components/NavbarComponent";
 import { ReactNode } from "react";
 
-
-
-
 export default function MainLayout({ children }: { children: ReactNode }) {
- 
-
   return (
-   <>
-  
+    <>
       <NavbarComponent />
-      <main className="px-[min(4em,8%)] space-y-12">{children}</main>
-      </>
+      <div className="px-[min(4em,8%)] space-y-12">{children}</div>
+    </>
   );
 }
