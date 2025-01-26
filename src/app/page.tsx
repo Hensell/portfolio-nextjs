@@ -21,14 +21,14 @@ export default function Home() {
       >
         <DrawerProjects
           triggerProps={{
-            footer: "Mi Proyecto",
+            footer: "Link Tree",
             imageUrl: "/image.jpg",
           }}
-          title="Personalizar Objetivo"
-          description="Establece tu meta diaria personalizada."
+          title="HenTree clon de LinkTree"
+          description="Es un clon de LinkTree hecho con React y TypeScript."
           content={
             <div>
-              <p>Contenido dinámico para este drawer.</p>
+              <a href="https://react-hentree.pages.dev/" target="_blank">Click para verlo</a>
             </div>
           }
         />
@@ -42,7 +42,7 @@ export default function Home() {
 
         <h2 className="text-4xl font-bold text-center py-10">FAQ</h2>
       
-        <dl className="bg-card p-5 md:p-16 rounded-3xl smooth-corners-md shadow-sm">
+        <dl className="bg-card p-5 md:p-16 rounded-3xl shadow-sm">
           {questions.map((e, i) => {
             return (
               <div key={i} className="flex flex-col pb-3">
