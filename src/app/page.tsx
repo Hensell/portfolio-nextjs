@@ -1,6 +1,6 @@
 "use client";
-import { DrawerProjects } from "./components/drawer";
-import MainLayout from "./layouts/MainLayout";
+import { DrawerProjects } from "./components/ui/Drawer";
+import MainLayout from "./components/layout/MainLayout";
 
 export default function Home() {
   return (
@@ -41,8 +41,8 @@ export default function Home() {
         </div>
 
         <h2 className="text-4xl font-bold text-center py-10">FAQ</h2>
-
-        <dl className="bg-card p-5 md:p-16 rounded-3xl shadow-sm">
+      
+        <dl className="bg-card p-5 md:p-16 rounded-3xl smooth-corners-md shadow-sm">
           {questions.map((e, i) => {
             return (
               <div key={i} className="flex flex-col pb-3">

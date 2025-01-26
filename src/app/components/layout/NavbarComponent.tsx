@@ -9,7 +9,7 @@ import {
   NavbarMenuToggle,
 } from "@nextui-org/navbar";
 import { Link } from "@nextui-org/react";
-import { ModeToggle } from "./modeToggle";
+import { ModeToggle } from "../ui/ModeToggle";
 
 
 export default function NavbarComponent() {

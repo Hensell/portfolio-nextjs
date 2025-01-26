@@ -13,7 +13,7 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import CustomCard from "./customCard";
+import CustomCard from "./CustomCard";
 
 type DrawerProjectsProps = {
   triggerProps: {
@@ -44,10 +44,14 @@ export function DrawerProjects({
       </DrawerTrigger>
       <DrawerContent>
         <div className="mx-auto w-full max-w-sm">
-          <DrawerHeader>
+         
+
+          
+          <DrawerHeader  style={{ backgroundImage: `url(${triggerProps.imageUrl})` }}>
             <DrawerTitle>{title}</DrawerTitle>
             <DrawerDescription>{description}</DrawerDescription>
           </DrawerHeader>
+    
           <div className="p-4 pb-0">
             {content || (
               <div className="flex items-center justify-center space-x-2">
