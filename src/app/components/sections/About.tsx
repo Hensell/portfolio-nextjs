@@ -8,20 +8,20 @@ export default function App({ id }: AboutProps) {
   return (
     <section
       id={id}
-      className="h-[100vh] grid grid-rows-[1fr,1fr,1fr] grid-cols-1 px-10"
+      className="h-[100vh] grid grid-rows-[1fr,1fr,1fr] grid-cols-1 px-12"
     >
-      <p className="font-roboto font-extralight text-black dark:text-white text-sm pt-10">
+      <p className="font-roboto font-extralight text-black dark:text-white text-lg pt-12">
         PASSIONATE FULL STACK DEVELOPER
         <br /> CREATING AMAZING WEB AND MOBILE
         <br /> EXPERIENCES
       </p>
 
-      <h1 className="font-robotoSerif text-center font-normal text-[clamp(1rem,calc(2.5vw+3rem),5.5rem)]">
+      <h1 className="font-robotoSerif text-center font-normal text-[clamp(1rem,calc(2.5vw+4rem),7rem)]">
         <span className="block">HENSELL</span>
         <span className="block">ESPINOZA</span>
       </h1>
       <Button
-        className="w-fit mx-auto font-robotoSerif text-xs font-light"
+        className="w-fit mx-auto font-roboto text-base font-extralight"
         variant="light"
         radius="none"
         endContent={
