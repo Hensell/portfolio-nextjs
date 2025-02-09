@@ -10,15 +10,15 @@ export default function App({ id }: AboutProps) {
       id={id}
       className="h-[100vh] grid grid-rows-[1fr,1fr,1fr] grid-cols-1 px-12"
     >
-      <p className="font-roboto font-extralight text-black dark:text-white text-lg pt-12">
+      <p className="font-roboto font-extralight text-black dark:text-white md:text-lg text-xs pt-12">
         <span className="block">PASSIONATE FULL STACK DEVELOPER</span>
         <span className="block">CREATING AMAZING WEB AND MOBILE</span>
         <span className="block">EXPERIENCES</span>
       </p>
 
-      <h1 className="font-robotoSerif text-center font-normal md:text-8xl text-6xl ">
+      <h1 className="font-robotoSerif text-center font-normal md:text-8xl text-4xl ">
         <span className="block">HENSELL</span>
-        <span className="block mt-12 mb-10">ESPINOZA</span>
+        <span className="block md:mt-12 mt-0 mb-10">ESPINOZA</span>
       </h1>
       <Button
         className="w-fit mx-auto font-roboto text-base font-extralight"
