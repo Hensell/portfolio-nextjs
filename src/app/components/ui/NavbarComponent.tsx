@@ -62,6 +62,7 @@ export default function App() {
               onPress={() => setIsMenuOpen(false)}
               color="foreground"
               className="w-full"
+              href="#"
               size="lg"
             >
               {item}
