@@ -6,17 +6,19 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: 'Satoshi', sans-serif;
- 
+  font-family: var(--font-roboto-flex) var(--font-roboto-serif), serif;
 }
+
 @layer base {
   :root {
-    --background: 69 60% 87%;
-    --foreground: 68 73% 1%;
-    --card:  69 60% 95%;
-    --card-foreground:68 73% 12%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --font-roboto-flex: "Roboto Flex", sans-serif;
+    --font-forum: "Roboto Serif", serif;
+    --background: 69 58% 94%;
+    --foreground: 68 73% 5%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
     --primary: 0 0% 9%;
     --primary-foreground: 0 0% 98%;
     --secondary: 0 0% 96.1%;
@@ -35,14 +37,15 @@ body {
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --blur-color:hsla(69, 60%, 87%, 0.3);
     --radius: 0.5rem;
   }
   .dark {
+    --font-roboto-flex: "Roboto Flex", sans-serif;
+    --font-forum: "Roboto Serif", serif;
     --background: 69 78% 2%;
     --foreground: 69 60% 87%;
-    --card: 68 73% 12%; 
-    --card-foreground: 69 60% 87%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
     --primary: 0 0% 98%;
@@ -63,11 +66,9 @@ body {
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-    --blur-color: hsla(69, 78%, 2%, 0.2);
-    --radius: 0.5rem;
-
   }
 }
+
 @layer base {
   * {
     @apply border-border;
