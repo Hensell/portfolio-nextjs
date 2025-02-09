@@ -7,6 +7,7 @@ export default function Home() {
     <MainLayout>
       <About id="about" />
       <NavbarComponent />
+      <About id="about" />
     </MainLayout>
   );
 }
