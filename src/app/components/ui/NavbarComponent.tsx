@@ -16,7 +16,7 @@ export default function App() {
       <NavbarContent>
         <NavbarBrand>
           <DrawerComponent />
-          <p className="font-robotoSerif font-bold text-inherit">HENSELL</p>
+          <p className="font-robotoSerif font-normal text-inherit">HENSELL</p>
         </NavbarBrand>
       </NavbarContent>
 
