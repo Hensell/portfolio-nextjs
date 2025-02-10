@@ -1,14 +1,14 @@
 import { MainLayout } from "./components/layout/MainLayout";
-import About from "./components/sections/About";
-import Project from "./components/sections/Project";
+import AboutSection from "./components/sections/AboutSection";
+import ProjectSection from "./components/sections/ProjectSection";
 import NavbarComponent from "./components/ui/NavbarComponent";
 
 export default function Home() {
   return (
     <MainLayout>
-      <About id="about" />
+      <AboutSection id="about" />
       <NavbarComponent />
-      <Project />
+      <ProjectSection />
     </MainLayout>
   );
 }
