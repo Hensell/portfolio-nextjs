@@ -2,8 +2,8 @@ import ProjectCard from "../ui/ProjectCard";
 
 export default function App() {
   return (
-    <div className="grid gap-4 grid-cols-[repeat(auto-fit,minmax(300px,1fr))]  sm:px-16 px-5">
-      {Array.from({ length: 12 }).map((_, index) => (
+    <div className="grid gap-4 grid-cols-[repeat(auto-fit,minmax(300px,1fr))]  px-12 ">
+      {Array.from({ length: 4 }).map((_, index) => (
         <ProjectCard
           key={index}
           src={"/projects/quantixPage.png"}
