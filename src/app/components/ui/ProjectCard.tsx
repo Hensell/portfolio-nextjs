@@ -13,7 +13,7 @@ export default function ProjectCard({
   src,
   alt,
   text,
-  height = "500px",
+  height = "450px",
   link,
 }: ProjectCardProps) {
   return (

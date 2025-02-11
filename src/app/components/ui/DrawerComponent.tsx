@@ -15,7 +15,7 @@ export default function App() {
   return (
     <div className="sm:hidden">
       <Button onPress={onOpen} isIconOnly variant="light" radius="none">
-        <Icon icon="gridicons:menu" />
+        <Icon icon="cil:hamburger-menu" />
       </Button>
       <Drawer
         isOpen={isOpen}
