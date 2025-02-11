@@ -27,7 +27,7 @@ export default function ProjectCard({
           className="z-0"
         />
 
-        <div className="absolute inset-0 dark:bg-gray-700 bg-black opacity-50 z-10" />
+        <div className="absolute inset-0 bg-foreground opacity-75 dark:bg-black z-10" />
 
         <div className="absolute inset-0 flex items-center justify-center z-20">
           <h2 className="text-white text-3xl font-normal text-center px-4 font-robotoSerif">
