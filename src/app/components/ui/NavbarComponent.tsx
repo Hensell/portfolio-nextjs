@@ -16,8 +16,12 @@ export default function App() {
       <NavbarContent>
         <NavbarBrand>
           <DrawerComponent />
+
+          <Link href="#" className="sm:hidden font-robotoSerif">
+            HENSELL
+          </Link>
           <Link
-            className="font-robotoSerif font-light"
+            className="font-robotoSerif font-light hidden sm:flex"
             color="foreground"
             href="#"
             showAnchorIcon

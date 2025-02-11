@@ -50,6 +50,22 @@ export default function App() {
                 >
                   ABOUT
                 </Link>
+                <Link
+                  onPress={onClose}
+                  className="font-robotoSerif "
+                  color="foreground"
+                  href="#projects"
+                >
+                  PROJECTS
+                </Link>
+                <Link
+                  onPress={onClose}
+                  className="font-robotoSerif "
+                  color="foreground"
+                  href="#contact"
+                >
+                  CONTACT
+                </Link>
               </DrawerBody>
               <DrawerFooter>
                 <Button color="danger" variant="light" onPress={onClose}>
