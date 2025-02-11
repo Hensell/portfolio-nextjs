@@ -16,14 +16,24 @@ export default function App() {
       <NavbarContent>
         <NavbarBrand>
           <DrawerComponent />
-          <p className="font-robotoSerif font-normal text-inherit">HENSELL</p>
+          <Link
+            className="font-robotoSerif font-light"
+            color="foreground"
+            href="#"
+          >
+            HENSELL
+          </Link>
         </NavbarBrand>
       </NavbarContent>
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link className="font-robotoSerif " color="foreground" href="#">
-            About
+          <Link
+            className="font-robotoSerif font-light"
+            color="foreground"
+            href="#"
+          >
+            ABOUT
           </Link>
         </NavbarItem>
       </NavbarContent>

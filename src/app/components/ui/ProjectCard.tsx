@@ -26,11 +26,11 @@ export default function ProjectCard({
           objectFit="cover"
           className="z-0"
         />
-
-        <div className="absolute inset-0 bg-foreground opacity-75 dark:bg-black z-10" />
+        <div className="absolute inset-0 backdrop-blur-sm z-10 bg-black/30" />
+        <div className="absolute inset-0  bg-foreground opacity-70 dark:bg-black z-10" />
 
         <div className="absolute inset-0 flex items-center justify-center z-20">
-          <h2 className="text-white text-3xl font-normal text-center px-4 font-robotoSerif">
+          <h2 className="text-white text-3xl font-light text-center px-4 font-robotoSerif">
             {text}
           </h2>
         </div>

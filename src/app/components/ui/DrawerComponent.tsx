@@ -48,7 +48,7 @@ export default function App() {
                   color="foreground"
                   href="#"
                 >
-                  About
+                  ABOUT
                 </Link>
               </DrawerBody>
               <DrawerFooter>

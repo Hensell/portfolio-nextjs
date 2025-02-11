@@ -1,4 +1,4 @@
-import { Button } from "@heroui/react";
+import { Button, Link } from "@heroui/react";
 
 type AboutProps = {
   id: string;
@@ -24,6 +24,8 @@ export default function App({ id }: AboutProps) {
         className="w-fit mx-auto font-roboto text-base font-extralight"
         variant="light"
         radius="none"
+        as={Link}
+        href="#contact"
         endContent={
           <svg
             xmlns="http://www.w3.org/2000/svg"
