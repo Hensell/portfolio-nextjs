@@ -38,14 +38,14 @@ export default function ProjectCard({
       <Chip
         size="sm"
         radius="none"
-        className="my-2 font-roboto font-light self-start"
+        className="my-2 font-robotoSerif font-thin self-start bg-secondary-50"
       >
         {label}
       </Chip>
 
       <div className="flex flex-row justify-between w-full font-roboto ">
-        <p className="font-semibold text-md"> {text}</p>
-        <p className="font-thin text-sm">{date}</p>
+        <p className="font-normal text-md"> {text}</p>
+        <p className="font-serif font-thin text-sm">{date}</p>
       </div>
     </Link>
   );
