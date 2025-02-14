@@ -1,4 +1,4 @@
-import { Link } from "@heroui/react";
+import { Link, Chip } from "@heroui/react";
 import Image from "next/image";
 
 interface ProjectCardProps {
@@ -7,6 +7,8 @@ interface ProjectCardProps {
   text: string;
   height?: string;
   link: string;
+  label: string;
+  date: string;
 }
 
 export default function ProjectCard({
@@ -15,25 +17,35 @@ export default function ProjectCard({
   text,
   height = "300px",
   link,
+  label,
+  date,
 }: ProjectCardProps) {
   return (
-    <Link isExternal href={link}>
-      <div className="relative w-full overflow-hidden " style={{ height }}>
+    <Link isExternal href={link} className="flex flex-col">
+      <div
+        className="relative w-full overflow-hidden bg-secondary-50"
+        style={{ height }}
+      >
         <Image
           src={src}
           alt={alt}
           layout="fill"
           objectFit="cover"
-          className="z-0"
+          className="z-0 transition duration-1000 hover:scale-105"
         />
-        <div className="absolute inset-0 backdrop-blur-sm z-10 bg-black/30" />
-        <div className="absolute inset-0  bg-foreground opacity-70 dark:bg-black z-10" />
+      </div>
 
-        <div className="absolute inset-0 flex items-center justify-center z-20">
-          <h2 className="text-white text-3xl font-light text-center px-4 font-robotoSerif">
-            {text}
-          </h2>
-        </div>
+      <Chip
+        size="sm"
+        radius="none"
+        className="my-2 font-roboto font-light self-start"
+      >
+        {label}
+      </Chip>
+
+      <div className="flex flex-row justify-between w-full font-roboto ">
+        <p className="font-semibold text-md"> {text}</p>
+        <p className="font-thin text-sm">{date}</p>
       </div>
     </Link>
   );
