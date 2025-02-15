@@ -15,7 +15,7 @@ export default function ProjectCard({
   src,
   alt,
   text,
-  height = "300px",
+  height = "150px",
   link,
   label,
   date,

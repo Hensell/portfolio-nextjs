@@ -4,9 +4,9 @@ export default function App() {
   return (
     <div
       id="projects"
-      className="grid gap-10 grid-cols-[repeat(auto-fit,minmax(300px,1fr))] px-12 mt-10"
+      className="grid gap-10 grid-cols-[repeat(auto-fit,minmax(150px,1fr))] md:px-12 px-0 mt-10"
     >
-      {Array.from({ length: 8 }).map((_, index) => (
+      {Array.from({ length: 4 }).map((_, index) => (
         <ProjectCard
           key={index}
           src={"/projects/image4.png"}
