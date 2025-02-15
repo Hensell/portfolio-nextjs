@@ -1,4 +1,6 @@
+"use client";
 import { Button, Link } from "@heroui/react";
+import { TypeAnimation } from "react-type-animation";
 
 type AboutProps = {
   id: string;
@@ -11,9 +13,16 @@ export default function App({ id }: AboutProps) {
       className="h-[100vh] grid grid-rows-[1fr,1fr,1fr] grid-cols-1 px-12"
     >
       <p className="font-roboto font-extralight text-black dark:text-white md:text-lg text-xs pt-12">
-        <span className="block">PASSIONATE FULL STACK DEVELOPER</span>
-        <span className="block">CREATING AMAZING WEB AND MOBILE</span>
-        <span className="block">EXPERIENCES</span>
+        <TypeAnimation
+          sequence={[
+            `PASSIONATE FULL STACK DEVELOPER\nCREATING AMAZING WEB AND MOBILE\nEXPERIENCES`,
+            1000,
+          ]}
+          wrapper="span"
+          cursor={false}
+          speed={80}
+          style={{ whiteSpace: "pre-line", display: "block" }}
+        />
       </p>
 
       <h1 className="font-robotoSerif text-center font-normal md:text-8xl text-4xl ">
