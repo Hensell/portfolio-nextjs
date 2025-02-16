@@ -19,7 +19,6 @@ export default function App() {
         }}
       />
       <Link
-        isExternal
         className="font-robotoSerif"
         size="sm"
         onPress={() => copyToClipboard("hensell104@gmail.com")}
@@ -28,14 +27,14 @@ export default function App() {
       </Link>
 
       <Link
-        isExternal
+        onPress={() => {}}
         href="https://www.linkedin.com/in/hensell-espinoza-a2b473125/"
         className="font-robotoSerif"
         size="sm"
       >
         LINKEDIN
       </Link>
-      <Link isExternal className="font-robotoSerif" size="sm">
+      <Link onPress={() => {}} className="font-robotoSerif" size="sm">
         CV
       </Link>
     </div>
