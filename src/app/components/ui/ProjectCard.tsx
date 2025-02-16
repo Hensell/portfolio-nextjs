@@ -48,7 +48,7 @@ export default function ProjectCard({
       </Chip>
 
       <div className="flex flex-row justify-between w-full ">
-        <p className="font-roboto font-extralight text-md"> {text}</p>
+        <p className="font-robotoSerif font-extralight text-sm"> {text}</p>
         <p className="font-robotoSerif font-thin text-sm">{date}</p>
       </div>
     </Link>
