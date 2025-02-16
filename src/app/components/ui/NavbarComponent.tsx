@@ -54,10 +54,22 @@ export default function App() {
           </Link>
         </NavbarBrand>
       </NavbarContent>
-      <NavbarContent className="flex sm:hidden" justify="center">
+
+      <NavbarContent className="hidden sm:flex" justify="center">
+        <NavbarItem>
+          <Link
+            className="font-robotoSerif font-light"
+            color="foreground"
+            href="#projects"
+          >
+            PROJECTS
+          </Link>
+        </NavbarItem>
+      </NavbarContent>
+      <NavbarContent justify="center">
         <NavbarItem>
           <Button
-            className="font-robotoSerif text-base font-extralight"
+            className="font-robotoSerif text-base font-extralight flex sm:hidden"
             variant="light"
             radius="none"
             as={Link}
@@ -89,21 +101,6 @@ export default function App() {
               </path>
             </svg>
           </Button>
-        </NavbarItem>
-      </NavbarContent>
-      <NavbarContent className="hidden sm:flex" justify="center">
-        <NavbarItem>
-          <Link
-            className="font-robotoSerif font-light"
-            color="foreground"
-            href="#projects"
-          >
-            PROJECTS
-          </Link>
-        </NavbarItem>
-      </NavbarContent>
-      <NavbarContent justify="center">
-        <NavbarItem>
           <ToggleTheme />
         </NavbarItem>
       </NavbarContent>
