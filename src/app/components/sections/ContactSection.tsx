@@ -19,6 +19,7 @@ export default function App() {
         }}
       />
       <Link
+        isExternal
         className="font-robotoSerif"
         size="sm"
         onPress={() => copyToClipboard("hensell104@gmail.com")}
@@ -34,7 +35,7 @@ export default function App() {
       >
         LINKEDIN
       </Link>
-      <Link className="font-robotoSerif" size="sm">
+      <Link isExternal className="font-robotoSerif" size="sm">
         CV
       </Link>
     </div>
