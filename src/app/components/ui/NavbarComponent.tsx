@@ -54,7 +54,7 @@ export default function App() {
           </Link>
         </NavbarBrand>
       </NavbarContent>
-      <NavbarContent className="flex sm:hidde" justify="center">
+      <NavbarContent className="flex sm:hidden" justify="center">
         <NavbarItem>
           <Button
             className="font-robotoSerif text-base font-extralight"
