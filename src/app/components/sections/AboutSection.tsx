@@ -30,7 +30,7 @@ export default function App({ id }: AboutProps) {
         <span className="block md:mt-12 mt-0 mb-10">ESPINOZA</span>
       </h1>
       <Button
-        className="w-fit mx-auto font-roboto text-base font-extralight"
+        className="w-fit mx-auto font-roboto text-base font-extralight sm:flex hidden"
         variant="light"
         radius="none"
         as={Link}
@@ -63,6 +63,41 @@ export default function App({ id }: AboutProps) {
         }
       >
         CONTACT
+      </Button>
+      <Button
+        className="w-fit mx-auto font-roboto text-base font-extralight sm:hidden flex"
+        variant="light"
+        radius="none"
+        as={Link}
+        href="#projects"
+        endContent={
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width={24}
+            height={24}
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="none"
+              stroke="currentColor"
+              strokeDasharray={10}
+              strokeDashoffset={10}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={1.4}
+              d="M12 15l-5 -5M12 15l5 -5"
+            >
+              <animate
+                fill="freeze"
+                attributeName="stroke-dashoffset"
+                dur="5s"
+                values="10;0"
+              ></animate>
+            </path>
+          </svg>
+        }
+      >
+        PROJECTS
       </Button>
     </section>
   );

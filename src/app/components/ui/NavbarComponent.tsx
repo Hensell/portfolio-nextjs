@@ -6,19 +6,17 @@ import {
   NavbarContent,
   NavbarItem,
   Link,
+  Button,
 } from "@heroui/react";
 import ToggleTheme from "./ToggleTheme";
-import DrawerComponent from "./DrawerComponent";
 
 export default function App() {
   return (
     <Navbar>
       <NavbarContent>
         <NavbarBrand>
-          <DrawerComponent />
-
-          <Link href="#projects" className="sm:hidden font-robotoSerif">
-            PROJECTS
+          <Link href="#" className="sm:hidden font-robotoSerif">
+            HENSELL
           </Link>
           <Link
             className="font-robotoSerif font-light hidden sm:flex"
@@ -56,8 +54,47 @@ export default function App() {
           </Link>
         </NavbarBrand>
       </NavbarContent>
-
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="flex sm:hidden gap-4" justify="center">
+        <NavbarItem>
+          <Button
+            className="w-fit mx-auto font-robotoSerif text-base font-extralight"
+            variant="light"
+            radius="none"
+            as={Link}
+            href="#contact"
+            isIconOnly
+            endContent={
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={24}
+                height={24}
+                viewBox="0 0 24 24"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  strokeDasharray={10}
+                  strokeDashoffset={10}
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.4}
+                  d="M12 15l-5 -5M12 15l5 -5"
+                >
+                  <animate
+                    fill="freeze"
+                    attributeName="stroke-dashoffset"
+                    dur="5s"
+                    values="10;0"
+                  ></animate>
+                </path>
+              </svg>
+            }
+          >
+            CONTACT
+          </Button>
+        </NavbarItem>
+      </NavbarContent>
+      <NavbarContent className="hidden sm:flex gap-4" justify="end">
         <NavbarItem>
           <Link
             className="font-robotoSerif font-light"

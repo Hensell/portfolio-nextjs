@@ -23,7 +23,7 @@ export default function ProjectCard({
   return (
     <Link isExternal href={link} className="flex flex-col">
       <div
-        className="relative w-full overflow-hidden bg-secondary-50"
+        className="relative w-full overflow-hidden bg-secondarybg"
         style={{ height }}
       >
         <Image
@@ -31,20 +31,24 @@ export default function ProjectCard({
           alt={alt}
           layout="fill"
           objectFit="cover"
-          className="z-0 transition duration-1000 hover:scale-105"
+          className="z-0 transition duration-1000 hover:scale-110"
         />
       </div>
 
       <Chip
         size="sm"
         radius="none"
-        className="my-2 font-robotoSerif font-thin self-start bg-secondary-50"
+        variant="flat"
+        classNames={{
+          base: "my-2 self-start bg-secondarybg",
+          content: "font-robotoSerif font-normal ",
+        }}
       >
         {label}
       </Chip>
 
       <div className="flex flex-row justify-between w-full ">
-        <p className="font-roboto font-normal text-md"> {text}</p>
+        <p className="font-roboto font-extralight text-md"> {text}</p>
         <p className="font-robotoSerif font-thin text-sm">{date}</p>
       </div>
     </Link>
