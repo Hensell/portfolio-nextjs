@@ -11,7 +11,7 @@ export default function App() {
   };
 
   return (
-    <div id="contact" className="gap-5 flex justify-center py-20">
+    <div id="contact" className="gap-5 flex justify-center py-20 h-[100vh]">
       <Toaster
         position="bottom-center"
         toastOptions={{

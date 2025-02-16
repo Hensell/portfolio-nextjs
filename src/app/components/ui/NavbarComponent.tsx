@@ -94,7 +94,7 @@ export default function App() {
           </Button>
         </NavbarItem>
       </NavbarContent>
-      <NavbarContent className="hidden sm:flex gap-4" justify="end">
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
           <Link
             className="font-robotoSerif font-light"
