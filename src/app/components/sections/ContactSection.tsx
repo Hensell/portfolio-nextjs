@@ -1,5 +1,5 @@
 "use client";
-import { Link } from "@heroui/react";
+import { Button, ButtonGroup, Link } from "@heroui/react";
 import { toast, Toaster } from "sonner";
 
 export default function App() {
@@ -18,25 +18,26 @@ export default function App() {
             "rounded-none bg-background text-foreground font-robotoSerif ",
         }}
       />
-      <Link
-        className="font-robotoSerif"
-        size="sm"
-        onPress={() => copyToClipboard("hensell104@gmail.com")}
-      >
-        EMAIL
-      </Link>
 
-      <Link
-        onPress={() => {}}
-        href="https://www.linkedin.com/in/hensell-espinoza-a2b473125/"
-        className="font-robotoSerif"
-        size="sm"
-      >
-        LINKEDIN
-      </Link>
-      <Link onPress={() => {}} className="font-robotoSerif" size="sm">
-        CV
-      </Link>
+      <ButtonGroup radius="none" className="font-robotoSerif">
+        <Button
+          href="https://www.linkedin.com/in/hensell-espinoza-a2b473125/"
+          target="_blank"
+          rel="noopener noreferrer"
+          as={Link}
+          variant="light"
+        >
+          LINKEDIN
+        </Button>
+
+        <Button
+          variant="light"
+          onPress={() => copyToClipboard("hensell104@gmail.com")}
+        >
+          EMAIL
+        </Button>
+        <Button variant="light">CV</Button>
+      </ButtonGroup>
     </div>
   );
 }
