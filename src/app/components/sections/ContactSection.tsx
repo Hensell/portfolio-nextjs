@@ -10,7 +10,7 @@ export default function App() {
   };
 
   return (
-    <div id="contact" className="gap-5 flex justify-center py-20 h-[100vh]">
+    <div id="contact" className="flex justify-center py-20 h-[100vh]">
       <Toaster
         position="bottom-center"
         toastOptions={{
@@ -25,7 +25,7 @@ export default function App() {
           target="_blank"
           rel="noopener noreferrer"
           as={Link}
-          variant="light"
+          className="bg-secondarybg"
         >
           LINKEDIN
         </Button>
@@ -33,10 +33,13 @@ export default function App() {
         <Button
           variant="light"
           onPress={() => copyToClipboard("hensell104@gmail.com")}
+          className="bg-secondarybg"
         >
           EMAIL
         </Button>
-        <Button variant="light">CV</Button>
+        <Button variant="light" className="bg-secondarybg">
+          CV
+        </Button>
       </ButtonGroup>
     </div>
   );
