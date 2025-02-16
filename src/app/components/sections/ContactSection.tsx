@@ -1,6 +1,5 @@
 "use client";
 import { Link } from "@heroui/react";
-import { Icon } from "@iconify/react/dist/iconify.js";
 import { toast, Toaster } from "sonner";
 
 export default function App() {
@@ -22,8 +21,6 @@ export default function App() {
       <Link
         className="font-robotoSerif"
         size="sm"
-        showAnchorIcon
-        anchorIcon={<Icon icon="ph:link-simple-light" width="16" height="16" />}
         onPress={() => copyToClipboard("hensell104@gmail.com")}
       >
         EMAIL
@@ -33,17 +30,11 @@ export default function App() {
         isExternal
         href="https://www.linkedin.com/in/hensell-espinoza-a2b473125/"
         className="font-robotoSerif"
-        showAnchorIcon
         size="sm"
       >
         LINKEDIN
       </Link>
-      <Link
-        className="font-robotoSerif"
-        size="sm"
-        showAnchorIcon
-        anchorIcon={<Icon icon="mdi-light:download" width="16" height="16" />}
-      >
+      <Link className="font-robotoSerif" size="sm">
         CV
       </Link>
     </div>
