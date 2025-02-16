@@ -67,7 +67,7 @@ export default function App() {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="center">
-        <NavbarItem>
+        <NavbarItem className="flex">
           <Button
             className="font-robotoSerif text-base font-extralight flex sm:hidden"
             variant="light"
