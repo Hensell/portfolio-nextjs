@@ -10,7 +10,7 @@ export default function App() {
   };
 
   return (
-    <section className="flex flex-row  max-w-screen-md mx-auto justify-between mb-16 font-robotoSerif">
+    <section className="flex flex-row  max-w-screen-md mx-auto justify-between mb-16 font-robotoSerif px-5 sm:px-0">
       <div>
         <h2 className="opacity-85 tracking-widest mb-10">CONTACT</h2>
         <div className="flex flex-col gap-3">
