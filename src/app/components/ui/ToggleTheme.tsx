@@ -5,11 +5,11 @@ import { useState } from "react";
 
 export default function App() {
   const { theme, setTheme } = useTheme();
-  const [iconKey, setIconKey] = useState(0); // Estado para reiniciar la animación
+  const [iconKey, setIconKey] = useState(0);
 
   const switchTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
-    setIconKey((prev) => prev + 1); // Cambia la key para reiniciar la animación
+    setIconKey((prev) => prev + 1);
   };
 
   const toggleTheme = () => {
@@ -21,7 +21,13 @@ export default function App() {
   };
 
   return (
-    <Button isIconOnly onPress={toggleTheme} variant="light" radius="none">
+    <Button
+      isIconOnly
+      onPress={toggleTheme}
+      variant="light"
+      radius="none"
+      className="fixed justify-self-end mt-12"
+    >
       <Icon
         key={`sun-${iconKey}`}
         className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0"
