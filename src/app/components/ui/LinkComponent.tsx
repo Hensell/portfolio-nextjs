@@ -9,7 +9,7 @@ type LinkComponentProps = {
 export default function App({ url, label, onPress }: LinkComponentProps) {
   return (
     <Link
-      className="cursor-pointer text-xs"
+      className="cursor-pointer text-xs font-roboto"
       isExternal
       href={url}
       onPress={onPress}
