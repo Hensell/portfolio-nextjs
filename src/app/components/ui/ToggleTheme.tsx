@@ -26,7 +26,7 @@ export default function App() {
       onPress={toggleTheme}
       variant="light"
       radius="none"
-      className="fixed justify-self-end mt-12"
+      className="justify-self-end mt-12"
     >
       <Icon
         key={`sun-${iconKey}`}
