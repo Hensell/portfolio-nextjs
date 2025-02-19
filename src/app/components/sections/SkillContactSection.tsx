@@ -10,7 +10,7 @@ export default function App() {
   };
 
   return (
-    <section className="flex flex-row  max-w-screen-md mx-auto justify-between mb-40 font-robotoSerif px-12 text-xs">
+    <section className="flex flex-row  max-w-screen-md mx-auto justify-between mb-60 font-robotoSerif px-12 text-xs">
       
       <div>
         <h2 className="opacity-85 tracking-widest mb-10">SKILLS & FOCUS</h2>
