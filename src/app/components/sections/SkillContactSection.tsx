@@ -10,9 +10,9 @@ export default function App() {
   };
 
   return (
-    <section className="flex flex-col  max-w-screen-md font-robotoSerif sm:px-12 px-3 text-xs py-10">
+    <section className="flex flex-col md:flex-row w-full font-robotoSerif sm:px-12 px-3 text-xs py-10">
       <div className="flex max-w-screen-md justify-between mb-20">
-        <div>
+        <div className="md:mr-10">
           <h2 className="opacity-85 tracking-widest mb-10">CONTACT & LINKS</h2>
           <div className="flex flex-col gap-3">
             <LinkComponent
@@ -30,7 +30,7 @@ export default function App() {
             />
           </div>
         </div>{" "}
-        <div>
+        <div className="md:mr-10">
           <h2 className="opacity-85 tracking-widest mb-10">FEATURE PROJECTS</h2>
           <div className="flex flex-col gap-3">
             <LinkComponent
@@ -49,7 +49,7 @@ export default function App() {
         </div>
       </div>
       <div className="flex max-w-screen-md justify-between">
-        <div>
+        <div className="md:mr-10">
           <h2 className="opacity-85 tracking-widest mb-10">
             SKILLS & TECH STACK
           </h2>
