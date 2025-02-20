@@ -13,22 +13,6 @@ export default function App() {
     <section className="flex flex-col  max-w-screen-md font-robotoSerif sm:px-12 px-3 text-xs py-10">
       <div className="flex max-w-screen-md justify-between mb-20">
         <div>
-          <h2 className="opacity-85 tracking-widest mb-10">
-            SKILLS & TECH STACK
-          </h2>
-          <div className="flex flex-col gap-3">
-            <LinkComponent
-              url="https://nestjs.com/"
-              label={"NODE JS (NEST JS)"}
-            />
-
-            <LinkComponent url="https://expressjs.com/" label="EXPRESS JS" />
-
-            <LinkComponent url="https://flutter.dev/" label="FLUTTER" />
-            <LinkComponent url="https://nextjs.org/" label="NEXT JS" />
-          </div>
-        </div>
-        <div>
           <h2 className="opacity-85 tracking-widest mb-10">CONTACT & LINKS</h2>
           <div className="flex flex-col gap-3">
             <LinkComponent
@@ -44,6 +28,22 @@ export default function App() {
               onPress={() => copyToClipboard("hensell104@gmail.com")}
               label={"EMAIL"}
             />
+          </div>
+        </div>
+        <div>
+          <h2 className="opacity-85 tracking-widest mb-10">
+            SKILLS & TECH STACK
+          </h2>
+          <div className="flex flex-col gap-3">
+            <LinkComponent
+              url="https://nestjs.com/"
+              label={"NODE JS (NEST JS)"}
+            />
+
+            <LinkComponent url="https://expressjs.com/" label="EXPRESS JS" />
+
+            <LinkComponent url="https://flutter.dev/" label="FLUTTER" />
+            <LinkComponent url="https://nextjs.org/" label="NEXT JS" />
           </div>
         </div>
       </div>
