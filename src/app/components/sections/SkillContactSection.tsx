@@ -10,7 +10,7 @@ export default function App() {
   };
 
   return (
-    <section className="flex flex-col  max-w-screen-md mb-52 font-robotoSerif px-12 text-xs">
+    <section className="flex flex-col  max-w-screen-md font-robotoSerif sm:px-12 px-3 text-xs py-10">
       <div className="flex max-w-screen-md justify-between mb-20">
         <div>
           <h2 className="opacity-85 tracking-widest mb-10">
