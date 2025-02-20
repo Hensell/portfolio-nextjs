@@ -71,18 +71,15 @@ export default function App() {
           </h2>
           <div className="flex flex-col gap-3">
             <LinkComponent
-              url={"https://github.com/Hensell"}
+              url={"https://www.cloudflare.com/"}
               label={"CLOUDFLARE PAGES & WORKERS"}
             />
-            <LinkComponent
-              url={"https://www.linkedin.com/in/hensell-espinoza-a2b473125/"}
-              label={"GIT, GITHUB"}
-            />
-            <LinkComponent label={"RESUME"} />
+            <LinkComponent url={"https://www.figma.com/"} label={"FIGMA"} />
+            <LinkComponent url={"https://render.com/"} label={"RENDER"} />
 
             <LinkComponent
-              onPress={() => copyToClipboard("hensell104@gmail.com")}
-              label={"RENDER"}
+              onPress={() => copyToClipboard("https://imagekit.io/")}
+              label={"IMAGEKIT.IO"}
             />
           </div>
         </div>
