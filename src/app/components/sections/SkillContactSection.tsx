@@ -77,10 +77,7 @@ export default function App() {
             <LinkComponent url={"https://www.figma.com/"} label={"FIGMA"} />
             <LinkComponent url={"https://render.com/"} label={"RENDER"} />
 
-            <LinkComponent
-              onPress={() => copyToClipboard("https://imagekit.io/")}
-              label={"IMAGEKIT.IO"}
-            />
+            <LinkComponent url={"https://imagekit.io/"} label={"IMAGEKIT.IO"} />
           </div>
         </div>
       </div>
