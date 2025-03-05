@@ -37,7 +37,10 @@ export default function App() {
               url="https://nicafinanzas.com/"
               label={"NICA FINANZAS"}
             />
-            <LinkComponent label="WORK IN PROGRESS..." />
+            <LinkComponent
+              url={"https://quantix.software/"}
+              label="QUANTIX SOFTWARE"
+            />
             <LinkComponent label="WORK IN PROGRESS..." />
             <LinkComponent label="WORK IN PROGRESS..." />
           </div>
