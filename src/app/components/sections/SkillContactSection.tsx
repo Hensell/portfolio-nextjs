@@ -19,7 +19,7 @@ export default function App() {
               url={"https://www.linkedin.com/in/hensell-espinoza-a2b473125/"}
               label={"LINKEDIN"}
             />
-            <LinkComponent label={"RESUME"} />
+            <LinkComponent url={"doc/resume.pdf"} label={"RESUME"} />
             <LinkComponent
               url={"https://github.com/Hensell"}
               label={"GITHUB"}
