@@ -34,17 +34,12 @@ export default function App() {
           <h2 className="opacity-85 tracking-widest mb-10">FEATURE PROJECTS</h2>
           <div className="flex flex-col gap-3">
             <LinkComponent
-              url="https://nestjs.com/"
-              label={"NODE JS (NEST JS)"}
+              url="https://nicafinanzas.com/"
+              label={"NICA FINANZAS"}
             />
-
-            <LinkComponent
-              url="https://expressjs.com/"
-              label="QUANTIX WEBSITE"
-            />
-
-            <LinkComponent url="https://flutter.dev/" label="NICA FINANCE" />
-            <LinkComponent url="https://nextjs.org/" label="FINANCIAL STATS" />
+            <LinkComponent label="WORK IN PROGRESS..." />
+            <LinkComponent label="WORK IN PROGRESS..." />
+            <LinkComponent label="WORK IN PROGRESS..." />
           </div>
         </div>
       </div>
