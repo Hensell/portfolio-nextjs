@@ -2,7 +2,7 @@
 
 export default function App() {
   return (
-    <div className="px-12  space-y-2">
+    <div className="sm:px-12 px-3 space-y-2">
       <h2 className="font-robotoSerif">ABOUT ME</h2>
       <hr />
       <p className="font-roboto text-xs font-thin">
