@@ -2,10 +2,10 @@
 
 export default function App() {
   return (
-    <div className="px-12 font-robotoSerif space-y-2">
-      <h2>ABOUT ME</h2>
+    <div className="px-12  space-y-2">
+      <h2 className="font-robotoSerif">ABOUT ME</h2>
       <hr />
-      <p className="text-xs font-thin">
+      <p className="font-roboto text-xs font-thin">
         Results-driven Full-Stack Developer with 3+ years of experience in web
         and mobile app development, specializing in Next.js, Flutter,
         Express.js, NestJS, and Android with Jetpack Compose. Skilled in backend
