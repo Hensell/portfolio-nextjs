@@ -21,8 +21,8 @@ export default function ProjectCard({
   description,
 }: ProjectCardProps) {
   return (
-    <Link isExternal href={link} className="flex">
-      <div className="flex transition duration-500 w-full p-2 rounded-lg bg-white/0 hover:bg-foreground/10 hover:backdrop-blur-md">
+    <Link isExternal href={link}>
+      <div className="flex flex-col space-y-5 sm:flex-row justify-center transition duration-500 w-full p-2 rounded-lg bg-white/0 hover:bg-foreground/10 hover:backdrop-blur-md">
         <div className="relative overflow-hidden w-[300px]" style={{ height }}>
           <Image
             src={src}

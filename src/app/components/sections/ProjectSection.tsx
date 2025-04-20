@@ -15,7 +15,7 @@ export default function App() {
           }
         />
         <ProjectCard
-          src={"/projects/image4.png"}
+          src={"/projects/nicafinanzas.png"}
           alt={"nicafinanzas.com"}
           text={"nicafinanzas.com"}
           link="https://nicafinanzas.com/"
