@@ -50,7 +50,7 @@ export default function App() {
         </div>
       </div>
 
-      <div className="flex max-w-screen-md justify-between flex-wrap gap-10">
+      <div className="flex max-w-screen-md justify-between mb-20">
         {/* SKILLS */}
         <div className="md:mr-10">
           <h2 className="opacity-85 tracking-widest mb-10">SKILLS</h2>
