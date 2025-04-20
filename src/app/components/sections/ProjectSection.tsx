@@ -2,21 +2,29 @@ import ProjectCard from "../ui/ProjectCard";
 
 export default function App() {
   return (
-    <div
-      id="projects"
-      className="grid md:gap-10 gap-5 grid-cols-[repeat(auto-fit,minmax(150px,1fr))] md:px-12 px-5 mt-5 scroll-mt-20"
-    >
-      {Array.from({ length: 6 }).map((_, index) => (
+    <div className="px-3 space-y-2 mt-20">
+      <div id="projects" className="flex flex-col px-5 space-y-5">
         <ProjectCard
-          key={index}
           src={"/projects/image4.png"}
           alt={"quantix page"}
-          text={"QUANTIX"}
-          link="https://quantix-page.pages.dev/"
-          label={"WEBSITE"}
-          date={"02/2025"}
+          text={"quantix.software"}
+          link="https://quantix.software/"
+          labels={["Next.js", "Tailwind", "SEO"]}
+          description={
+            "Developed the official website for Quantix, a company that provides advanced software solutions for business management, inventory control, and automation."
+          }
         />
-      ))}
+        <ProjectCard
+          src={"/projects/image4.png"}
+          alt={"nicafinanzas.com"}
+          text={"nicafinanzas.com"}
+          link="https://nicafinanzas.com/"
+          labels={["Open AI API", "Flutter Web", "SEO"]}
+          description={
+            "Nicafinanzas is a web platform that helps Nicaraguans make smarter financial decisions through an AI-powered chatbot. It offers guidance on savings, loans, and personal finance, tailored to the local context."
+          }
+        />
+      </div>
     </div>
   );
 }

@@ -7,49 +7,55 @@ interface ProjectCardProps {
   text: string;
   height?: string;
   link: string;
-  label: string;
-  date: string;
+  labels: string[];
+  description: string;
 }
 
 export default function ProjectCard({
   src,
   alt,
   text,
-  height = "150px",
+  height = "120px",
   link,
-  label,
-  date,
+  labels,
+  description,
 }: ProjectCardProps) {
   return (
-    <Link isExternal href={link} className="flex flex-col">
-      <div
-        className="relative w-full overflow-hidden bg-secondarybg"
-        style={{ height }}
-      >
-        <Image
-          src={src}
-          alt={alt}
-          layout="fill"
-          objectFit="cover"
-          className="z-0 transition duration-1000 hover:scale-110"
-        />
-      </div>
+    <Link isExternal href={link} className="flex">
+      <div className="flex transition duration-500 w-full p-2 rounded-lg bg-white/0 hover:bg-foreground/10 hover:backdrop-blur-md">
+        <div className="relative overflow-hidden w-[300px]" style={{ height }}>
+          <Image
+            src={src}
+            alt={alt}
+            layout="fill"
+            objectFit="cover"
+            className="z-0 transition duration-1000 hover:scale-110"
+          />
+        </div>
 
-      <Chip
-        size="sm"
-        radius="none"
-        variant="flat"
-        classNames={{
-          base: "my-2 self-start bg-secondarybg",
-          content: "font-robotoSerif font-normal ",
-        }}
-      >
-        {label}
-      </Chip>
+        <div className="ml-3 flex flex-col justify-between w-full">
+          <div className="px-1 space-y-1">
+            <p className="font-robotoSerif font-semibold text-base">{text}</p>
+            <p className="font-roboto font-extralight text-sm">{description}</p>
+          </div>
 
-      <div className="flex flex-row justify-between w-full px-1">
-        <p className="font-robotoSerif font-extralight text-xs"> {text}</p>
-        <p className="font-robotoSerif font-extralight text-xs">{date}</p>
+          <div className="flex flex-wrap gap-1 mt-2 px-1">
+            {labels.map((label, index) => (
+              <Chip
+                key={index}
+                size="sm"
+                radius="none"
+                variant="flat"
+                classNames={{
+                  base: "bg-secondarybg",
+                  content: "font-roboto font-normal",
+                }}
+              >
+                {label}
+              </Chip>
+            ))}
+          </div>
+        </div>
       </div>
     </Link>
   );

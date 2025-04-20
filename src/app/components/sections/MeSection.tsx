@@ -3,14 +3,15 @@
 export default function App() {
   return (
     <div className="sm:px-12 px-3 space-y-2">
-      <h2 className="font-robotoSerif">ABOUT ME</h2>
       <hr />
-      <p className="font-roboto text-xs font-thin">
-        I’m a Full Stack Developer specialized in Flutter, Kotlin, React,
-        Next.js, and Node.js. I’ve worked on projects for startups and
-        companies, building scalable and efficient solutions. Currently, I’m
-        working on a wide range of projects, from web applications to automation
-        tools and custom solutions.
+      <h2 className="font-robotoSerif text-3xl">ABOUT ME</h2>
+      <hr />
+      <p className="font-roboto text-lg font-light">
+        I&apos;m a Full Stack Developer specialized in Flutter, Kotlin, React,
+        Next.js, and Node.js. I’ve developed scalable and efficient solutions
+        for startups and companies. Currently, I'm working on a variety of
+        projects ranging from web applications to automation tools and custom
+        software solutions.
       </p>
     </div>
   );
