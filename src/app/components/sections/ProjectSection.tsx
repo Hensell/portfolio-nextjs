@@ -27,7 +27,7 @@ export default function App() {
         <ProjectCard
           src={"/projects/quantixai.png"}
           alt={"quantixai"}
-          text={"quantix ai API"}
+          text={"Quantix Chat bot AI API"}
           link="https://github.com/Hensell/quantix-page-ai"
           labels={["OpenAI API", "Cloudflare Workers", "Node.JS", "Hono.JS"]}
           description={

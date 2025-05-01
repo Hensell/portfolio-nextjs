@@ -44,7 +44,10 @@ export default function App() {
               url={"https://quantix.software/"}
               label="QUANTIX SOFTWARE"
             />
-            <LinkComponent label="WORK IN PROGRESS..." />
+            <LinkComponent
+              label="CHAT BOT AI"
+              url={"https://github.com/Hensell/quantix-page-ai"}
+            />
             <LinkComponent label="WORK IN PROGRESS..." />
           </div>
         </div>
