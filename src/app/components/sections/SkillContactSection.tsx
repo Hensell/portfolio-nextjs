@@ -48,7 +48,10 @@ export default function App() {
               label="CHAT BOT AI"
               url={"https://github.com/Hensell/quantix-page-ai"}
             />
-            <LinkComponent label="WORK IN PROGRESS..." />
+            <LinkComponent
+              label="chat bot demo open source"
+              url={"https://github.com/Hensell/demo-quantix-chat"}
+            />
           </div>
         </div>
       </div>

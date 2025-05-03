@@ -34,6 +34,16 @@ export default function App() {
             "Open-source API built with Cloudflare Workers, Hono, and TypeScript to easily connect any frontend to OpenAI’s Assistant API for real-time AI-powered chatbots."
           }
         />
+        <ProjectCard
+          src={"/projects/chatbotdemo.png"}
+          alt={"demo for a chat bot with ai"}
+          text={"Quantix Chatbot – Cloudflare-Powered OpenAI Demo"}
+          link="https://github.com/Hensell/demo-quantix-chat"
+          labels={["OpenAI API", "Cloudflare Workers", "Next.js"]}
+          description={
+            "Lightweight, open-source AI chatbot demo built with TypeScript, Hono, Cloudflare Workers, and the OpenAI Assistant API."
+          }
+        />
       </div>
     </div>
   );
