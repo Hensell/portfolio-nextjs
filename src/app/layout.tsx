@@ -15,8 +15,8 @@ const robotoFlex = Roboto_Flex({
 });
 
 export const metadata: Metadata = {
-  title: "HENSELL ESPINOZA",
-  description: "FULL STACK DEVELOPER",
+  title: "HENSELL",
+  description: "HENSELL ESPINOZA - FULL STACK DEVELOPER",
   other: {
     "google-site-verification": "3u0uYIpFLgOisQ5AWoggP5hsV8Oh5Fym2V7sWnbmrk8",
   },
