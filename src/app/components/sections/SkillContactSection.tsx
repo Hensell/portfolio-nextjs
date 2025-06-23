@@ -1,107 +1,67 @@
 "use client";
-import { toast } from "sonner";
+
 import LinkComponent from "../ui/LinkComponent";
+import { motion } from "framer-motion";
 
 export default function App() {
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text).then(() => {
-      toast("COPIED TO CLIPBOARD");
-    });
-  };
+  const sections = [
+    {
+      title: "SKILLS",
+      links: [
+        { label: "REACT JS", url: "https://reactjs.org/" },
+        { label: "VITE", url: "https://vitejs.dev/" },
+        { label: "NEXT JS", url: "https://nextjs.org/" },
+        { label: "FLUTTER", url: "https://flutter.dev/" },
+        {
+          label: "JETPACK COMPOSE (KOTLIN)",
+          url: "https://developer.android.com/jetpack/compose",
+        },
+        { label: "NODE JS", url: "https://nodejs.org/" },
+        { label: "NEST JS", url: "https://nestjs.com/" },
+        { label: "EXPRESS JS", url: "https://expressjs.com/" },
+        { label: "TAILWIND CSS", url: "https://tailwindcss.com/" },
+        { label: "MONGODB", url: "https://www.mongodb.com/" },
+      ],
+    },
+    {
+      title: "TOOLS & RESOURCES",
+      links: [
+        {
+          label: "CLOUDFLARE PAGES & WORKERS",
+          url: "https://www.cloudflare.com/",
+        },
+        { label: "FIREBASE", url: "https://firebase.google.com/" },
+        { label: "RENDER", url: "https://render.com/" },
+        { label: "FIGMA", url: "https://www.figma.com/" },
+        { label: "IMAGEKIT.IO", url: "https://imagekit.io/" },
+        { label: "RESEND", url: "https://resend.com/" },
+        { label: "GIT", url: "https://git-scm.com/" },
+        { label: "NPM", url: "https://www.npmjs.com/" },
+      ],
+    },
+  ];
 
   return (
-    <section className="flex flex-col md:flex-row w-full font-robotoSerif sm:px-12 px-3 text-xs py-10">
-      <div className="flex max-w-screen-md justify-between mb-20">
-        {/* CONTACT & LINKS */}
-        <div className="md:mr-10">
-          <h2 className="opacity-85 tracking-widest mb-10">CONTACT & LINKS</h2>
-          <div className="flex flex-col gap-3">
-            <LinkComponent
-              url={"https://www.linkedin.com/in/hensell-espinoza-a2b473125/"}
-              label={"LINKEDIN"}
-            />
-            <LinkComponent url={"doc/resume.pdf"} label={"RESUME"} />
-            <LinkComponent
-              url={"https://github.com/Hensell"}
-              label={"GITHUB"}
-            />
-            <LinkComponent
-              onPress={() => copyToClipboard("hensell104@gmail.com")}
-              label={"EMAIL"}
-            />
-          </div>
-        </div>
-
-        {/* FEATURED PROJECTS */}
-        <div className="md:mr-10">
-          <h2 className="opacity-85 tracking-widest mb-10">FEATURE PROJECTS</h2>
-          <div className="flex flex-col gap-3">
-            <LinkComponent
-              url="https://nicafinanzas.com/"
-              label={"NICA FINANZAS"}
-            />
-            <LinkComponent
-              url={"https://quantix.software/"}
-              label="QUANTIX SOFTWARE"
-            />
-            <LinkComponent
-              label="CHAT BOT AI"
-              url={"https://github.com/Hensell/quantix-page-ai"}
-            />
-            <LinkComponent
-              label="chat bot demo open source"
-              url={"https://github.com/Hensell/demo-quantix-chat"}
-            />
-          </div>
-        </div>
-      </div>
-
-      <div className="flex max-w-screen-md justify-between mb-20">
-        {/* SKILLS */}
-        <div className="md:mr-10">
-          <h2 className="opacity-85 tracking-widest mb-10">SKILLS</h2>
-          <div className="flex flex-col gap-3">
-            <LinkComponent url="https://reactjs.org/" label="REACT JS" />
-            <LinkComponent url="https://vitejs.dev/" label="VITE" />
-            <LinkComponent url="https://nextjs.org/" label="NEXT JS" />
-            <LinkComponent url="https://flutter.dev/" label="FLUTTER" />
-            <LinkComponent
-              url="https://developer.android.com/jetpack/compose"
-              label="JETPACK COMPOSE (KOTLIN)"
-            />
-            <LinkComponent url="https://nodejs.org/" label="NODE JS" />
-            <LinkComponent url="https://nestjs.com/" label="NEST JS" />
-            <LinkComponent url="https://expressjs.com/" label="EXPRESS JS" />
-            <LinkComponent
-              url="https://tailwindcss.com/"
-              label="TAILWIND CSS"
-            />
-            <LinkComponent url="https://www.mongodb.com/" label="MONGODB" />
-          </div>
-        </div>
-
-        {/* TOOLS & RESOURCES */}
-        <div>
-          <h2 className="opacity-85 tracking-widest mb-10">
-            TOOLS & RESOURCES
-          </h2>
-          <div className="flex flex-col gap-3">
-            <LinkComponent
-              url="https://www.cloudflare.com/"
-              label="CLOUDFLARE PAGES & WORKERS"
-            />
-            <LinkComponent
-              url="https://firebase.google.com/"
-              label="FIREBASE"
-            />
-            <LinkComponent url="https://render.com/" label="RENDER" />
-            <LinkComponent url="https://www.figma.com/" label="FIGMA" />
-            <LinkComponent url="https://imagekit.io/" label="IMAGEKIT.IO" />
-            <LinkComponent url="https://resend.com/" label="RESEND" />
-            <LinkComponent url="https://git-scm.com/" label="GIT" />
-            <LinkComponent url="https://www.npmjs.com/" label="NPM" />
-          </div>
-        </div>
+    <section className="w-full px-4 sm:px-6 md:px-12 py-16 bg-background text-foreground">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 max-w-screen-xl mx-auto">
+        {sections.map((section, i) => (
+          <motion.div
+            key={section.title}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.4, delay: i * 0.1 }}
+          >
+            <h2 className="text-sm font-semibold tracking-widest text-foreground/80 mb-6 uppercase">
+              {section.title}
+            </h2>
+            <div className="flex flex-col gap-3">
+              {section.links.map((link, j) => (
+                <LinkComponent key={j} label={link.label} url={link.url} />
+              ))}
+            </div>
+          </motion.div>
+        ))}
       </div>
     </section>
   );

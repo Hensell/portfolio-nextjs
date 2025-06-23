@@ -11,9 +11,8 @@ export default function Home() {
   return (
     <MainLayout>
       <NavbarComponent />
-      <FadeInOnScroll>
-        <AboutSection id="about" />
-      </FadeInOnScroll>
+
+      <AboutSection id="about" />
 
       <FadeInOnScroll delay={0.1}>
         <MeSection />
@@ -33,20 +32,60 @@ export default function Home() {
 
       <SkillContactSection />
 
-      <section className="w-full py-20 text-center sm:px-12 px-5">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-6 font-robotoSerif">
-          Let’s build something amazing together.
+      <section
+        id="contact"
+        className="w-full py-24 px-5 sm:px-12 text-center bg-background text-foreground"
+      >
+        <h2 className="text-3xl md:text-4xl font-robotoSerif font-bold mb-6 leading-snug">
+          Let’s build something <span className="text-primary">amazing</span>{" "}
+          together.
         </h2>
-        <p className="text-sm md:text-base text-foreground/80 mb-8 font-roboto">
-          I’m currently open to freelance opportunities and remote positions. If
-          you have a project or just want to connect, feel free to reach out.
+
+        <p className="text-base md:text-lg font-roboto text-foreground/80 max-w-2xl mx-auto mb-8">
+          I’m currently open to freelance opportunities and remote
+          collaborations. Whether you have a project, a challenge, or just want
+          to connect — I’d love to hear from you.
         </p>
+
         <a
-          href="mailto:hensell104@gmail.com"
-          className="inline-block px-6 py-3 rounded-md bg-foreground text-background text-sm tracking-widest hover:bg-foreground/90 transition"
+          href="mailto:hensell@hensell.dev"
+          className="inline-block px-6 py-3 rounded-md bg-foreground text-background text-sm font-semibold tracking-widest hover:bg-foreground/90 transition-colors duration-300 shadow-md"
         >
           GET IN TOUCH
         </a>
+        <p className="mt-6 text-sm text-foreground/60">
+          Or find me on{" "}
+          <a
+            href="https://www.linkedin.com/in/hensell-espinoza-a2b473125/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-foreground"
+          >
+            LinkedIn
+          </a>{" "}
+          or{" "}
+          <a
+            href="/doc/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-foreground"
+          >
+            view my resume
+          </a>
+          .
+        </p>
+        <p className="mt-4 text-sm text-foreground/60">
+          You can also check out my{" "}
+          <a
+            href="https://github.com/Hensell"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-foreground"
+          >
+            GitHub profile
+          </a>
+          .
+        </p>
       </section>
     </MainLayout>
   );

@@ -1,5 +1,6 @@
 "use client";
 import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
 
 type AboutProps = {
   id: string;
@@ -9,25 +10,56 @@ export default function App({ id }: AboutProps) {
   return (
     <section
       id={id}
-      className="h-[100vh] grid grid-rows-[1fr,1fr,1fr] grid-cols-1 px-12"
+      className="min-h-screen flex flex-col items-center justify-center px-6 text-center"
     >
-      <p className="font-roboto font-extralight text-black dark:text-white md:text-lg text-xs pt-12 text-left">
+      {/* Subtítulo animado */}
+      <motion.p
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="font-light text-gray-700 dark:text-gray-300 text-sm md:text-base tracking-widest uppercase mb-4"
+      >
         <TypeAnimation
-          sequence={[
-            `PASSIONATE FULL STACK DEVELOPER\nCREATING AMAZING WEB AND MOBILE\nEXPERIENCES`,
-            1000,
-          ]}
+          sequence={["PASSIONATE FULL STACK DEVELOPER", 1000]}
           wrapper="span"
           cursor={false}
           speed={80}
           style={{ whiteSpace: "pre-line", display: "block" }}
         />
-      </p>
+      </motion.p>
 
-      <h1 className="font-robotoSerif text-center font-normal md:text-8xl text-4xl mt-8">
+      {/* Nombre */}
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2 }}
+        className="font-robotoSerif text-5xl md:text-7xl font-normal leading-tight"
+      >
         <span className="block">HENSELL</span>
-        <span className="block md:mt-12 mt-0 mb-10">ESPINOZA</span>
-      </h1>
+        <span className="block mt-2 md:mt-6">ESPINOZA</span>
+      </motion.h1>
+
+      {/* Descripción animada */}
+      <motion.p
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.4 }}
+        className="font-light text-gray-700 dark:text-gray-300 text-sm md:text-base mt-6 max-w-xl"
+      >
+        <TypeAnimation
+          sequence={["CREATING AMAZING WEB AND MOBILE EXPERIENCES", 2000]}
+          wrapper="span"
+          cursor={false}
+          speed={80}
+          style={{ whiteSpace: "pre-line", display: "block" }}
+        />
+      </motion.p>
+      <a
+        href="#contact"
+        className="inline-block mt-10 px-6 py-3 rounded-md bg-foreground text-background text-sm tracking-widest font-semibold hover:bg-foreground/90 transition-colors duration-300 shadow-md"
+      >
+        CONTACT ME
+      </a>
     </section>
   );
 }

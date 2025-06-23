@@ -44,7 +44,7 @@ export default function App() {
           </Link>
         </NavbarItem>
       </NavbarContent>
-      <NavbarContent justify="center">
+      <NavbarContent justify="end">
         <NavbarItem className="flex">
           <Link
             className="font-robotoSerif font-light"

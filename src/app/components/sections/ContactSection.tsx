@@ -21,7 +21,7 @@ export default function App() {
 
       <ButtonGroup radius="none" className="font-robotoSerif">
         <Button
-          href="https://www.linkedin.com/in/hensell-espinoza-a2b473125/"
+          href="https://www.linkedin.com/in/hensell-espinoza/"
           target="_blank"
           rel="noopener noreferrer"
           as={Link}
@@ -32,7 +32,7 @@ export default function App() {
 
         <Button
           variant="light"
-          onPress={() => copyToClipboard("hensell104@gmail.com")}
+          onPress={() => copyToClipboard("hensell@hensell.dev")}
           className="bg-secondarybg"
         >
           EMAIL
