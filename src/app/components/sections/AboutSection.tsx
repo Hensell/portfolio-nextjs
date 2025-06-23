@@ -1,6 +1,5 @@
 "use client";
 import { TypeAnimation } from "react-type-animation";
-import ToggleTheme from "../ui/ToggleTheme";
 
 type AboutProps = {
   id: string;
@@ -24,12 +23,11 @@ export default function App({ id }: AboutProps) {
           style={{ whiteSpace: "pre-line", display: "block" }}
         />
       </p>
-     
+
       <h1 className="font-robotoSerif text-center font-normal md:text-8xl text-4xl mt-8">
         <span className="block">HENSELL</span>
         <span className="block md:mt-12 mt-0 mb-10">ESPINOZA</span>
       </h1>
- <ToggleTheme />
     </section>
   );
 }

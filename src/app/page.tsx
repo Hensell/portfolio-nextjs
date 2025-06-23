@@ -5,10 +5,12 @@ import SkillContactSection from "./components/sections/SkillContactSection";
 import MeSection from "./components/sections/MeSection";
 import ProjectSection from "./components/sections/ProjectSection";
 import FadeInOnScroll from "./components/ui/FadeInOnScroll";
+import NavbarComponent from "./components/ui/NavbarComponent";
 
 export default function Home() {
   return (
     <MainLayout>
+      <NavbarComponent />
       <FadeInOnScroll>
         <AboutSection id="about" />
       </FadeInOnScroll>

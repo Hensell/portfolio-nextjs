@@ -3,7 +3,7 @@ import ProjectCard from "../ui/ProjectCard";
 export default function App() {
   return (
     <div className="px-3 space-y-2 mt-20">
-      <div id="projects" className="flex flex-col px-5 space-y-5">
+      <div id="projects" className="flex flex-col px-5 space-y-5 scroll-mt-24">
         <ProjectCard
           src={"/projects/quantixPage.png"}
           alt={"quantix page"}
