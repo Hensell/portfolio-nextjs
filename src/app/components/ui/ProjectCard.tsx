@@ -10,7 +10,7 @@ interface ProjectCardProps {
   link: string;
   labels: string[];
   description: string;
-  onClick?: () => void; // nuevo
+  onClick?: () => void;
 }
 
 export default function ProjectCard({

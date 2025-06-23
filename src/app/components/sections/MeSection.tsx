@@ -5,7 +5,6 @@ import Image from "next/image";
 export default function AboutSection() {
   return (
     <section className="w-full px-6 md:px-12 py-20 flex flex-col md:flex-row items-center gap-12">
-      {/* Texto animado */}
       <motion.div
         initial={{ opacity: 0, x: -40 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -28,7 +27,6 @@ export default function AboutSection() {
         </p>
       </motion.div>
 
-      {/* Imagen o visual opcional */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
