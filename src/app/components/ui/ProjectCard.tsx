@@ -40,7 +40,18 @@ export default function ProjectCard({
       <div className="ml-3 flex flex-col justify-between w-full">
         <div className="px-1 space-y-1">
           <p className="font-robotoSerif font-semibold text-base">{text}</p>
-          <p className="font-roboto font-extralight text-sm">{description}</p>
+          <p className="font-roboto font-extralight text-sm">
+            {description.length > 120 ? (
+              <>
+                {description.slice(0, 120)}
+                <span className="text-primary underline font-semibold ml-1 hover:opacity-80">
+                  ...click to view more
+                </span>
+              </>
+            ) : (
+              description
+            )}
+          </p>
         </div>
 
         <div className="flex flex-wrap gap-1 mt-2 px-1">

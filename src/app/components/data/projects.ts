@@ -8,7 +8,7 @@ export const projects: ProjectData[] = [
     link: "https://quantix.software/",
     labels: ["Next.js", "Tailwind", "SEO"],
     description:
-      "Developed the official website for Quantix, a company that provides advanced software solutions for business management, inventory control, and automation.",
+      "Designed and developed the official website for Quantix, a Nicaraguan software company focused on inventory and sales management solutions. Led the UI/UX design, implemented SEO best practices, and deployed the project using Cloudflare Pages. Integrated Google Search Console for indexing and performance tracking. Also collaborated on building a custom AI assistant using the OpenAI API to enhance customer interaction.",
   },
   {
     src: "/projects/nicafinanzas.png",
@@ -17,7 +17,7 @@ export const projects: ProjectData[] = [
     link: "https://nicafinanzas.com/",
     labels: ["OpenAI API", "Flutter Web", "SEO"],
     description:
-      "Nicafinanzas is a web platform that helps Nicaraguans make smarter financial decisions through an AI-powered chatbot. It offers guidance on savings, loans, and personal finance, tailored to the local context.",
+      "Created NicaFinanzas, a Flutter web platform designed to improve financial literacy in Nicaragua through an AI-powered chatbot. Developed the frontend using Flutter Web and integrated the OpenAI API to provide real-time guidance on savings, loans, and personal finance. Focused on delivering localized, accessible content tailored to the Nicaraguan context, with emphasis on UX and educational impact.",
   },
   {
     src: "/projects/quantixai.png",
@@ -26,7 +26,7 @@ export const projects: ProjectData[] = [
     link: "https://github.com/Hensell/quantix-page-ai",
     labels: ["OpenAI API", "Cloudflare Workers", "Node.JS", "Hono.JS"],
     description:
-      "Open-source API built with Cloudflare Workers, Hono, and TypeScript to easily connect any frontend to OpenAI’s Assistant API for real-time AI-powered chatbots.",
+      "Built an open-source API using Cloudflare Workers, Hono, and TypeScript to enable seamless integration between any frontend and OpenAI’s Assistant API. Designed to be lightweight, fast, and developer-friendly, the project serves as a plug-and-play backend for real-time AI-powered chatbots. Emphasized modular architecture and public documentation to support community adoption and extensibility.",
   },
   {
     src: "/projects/chatbotdemo.png",
@@ -35,6 +35,6 @@ export const projects: ProjectData[] = [
     link: "https://github.com/Hensell/demo-quantix-chat",
     labels: ["OpenAI API", "Cloudflare Workers", "Next.js"],
     description:
-      "Lightweight, open-source AI chatbot demo built with TypeScript, Hono, Cloudflare Workers, and the OpenAI Assistant API.",
+      "Developed a lightweight, open-source chatbot demo that connects a Next.js frontend to OpenAI’s Assistant API via a backend powered by Cloudflare Workers and Hono. Built with TypeScript and designed for fast deployment, the project showcases real-time AI interaction and can be easily adapted for custom use cases. Published on GitHub with clear documentation to support developers exploring OpenAI integrations.",
   },
 ];

@@ -10,7 +10,7 @@ export default function App({ id }: AboutProps) {
   return (
     <section
       id={id}
-      className="min-h-screen flex flex-col items-center justify-center px-6 text-center"
+      className="min-h-screen flex flex-col items-center mt-16 px-6 text-center max-w-full sm:max-w-screen-sm md:max-w-screen-md"
     >
       {/* Subtítulo animado */}
       <motion.p
