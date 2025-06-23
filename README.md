@@ -41,7 +41,7 @@ src/
 
 If you'd like to work together or just want to connect:
 
-- 🌐 [https://quantix.software](https://hensell.dev/)
+- 🌐 [https://hensell.dev](https://hensell.dev/)
 - 📧 Email: hensell@hensell.dev
 - 🧑‍💻 GitHub: [https://github.com/Hensell](https://github.com/Hensell)
 - 💼 LinkedIn: [https://www.linkedin.com/in/hensell-espinoza](https://www.linkedin.com/in/hensell-espinoza)
