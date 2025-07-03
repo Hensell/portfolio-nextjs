@@ -6,8 +6,7 @@ import ProjectDrawer from "../drawers/ProjectDrawer"; // <- tu drawer
 import type { ProjectData } from "../hooks/useProjectDrawer";
 
 const stacks = [
-  "All",
-  ...Array.from(new Set(projects.flatMap((p) => p.labels))),
+  "All","Flutter", "Next.JS","Node.JS"
 ];
 
 export default function ProjectSection() {
