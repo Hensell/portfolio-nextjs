@@ -3,6 +3,7 @@ import { useState } from "react";
 import ProjectCard from "../ui/ProjectCard";
 import { projects } from "../data/projects";
 import ProjectDrawer from "../drawers/ProjectDrawer"; // <- tu drawer
+import type { ProjectData } from "../hooks/useProjectDrawer";
 
 const stacks = [
   "All",
@@ -11,7 +12,10 @@ const stacks = [
 
 export default function ProjectSection() {
   const [filter, setFilter] = useState("All");
-  const [selectedProject, setSelectedProject] = useState(null);
+  // <-- TIPO explícito aquí 👇
+  const [selectedProject, setSelectedProject] = useState<ProjectData | null>(
+    null
+  );
   const [isOpen, setIsOpen] = useState(false);
 
   const filteredProjects =
@@ -23,7 +27,7 @@ export default function ProjectSection() {
   const [featured, ...rest] = filteredProjects;
 
   // Cuando das click, abre el drawer con ese proyecto
-  const handleCardClick = (project: any) => {
+  const handleCardClick = (project: ProjectData) => {
     setSelectedProject(project);
     setIsOpen(true);
   };
@@ -73,13 +77,12 @@ export default function ProjectSection() {
       </div>
 
       {/* Drawer */}
- <ProjectDrawer
-  isOpen={isOpen}
-  onOpenChange={() => setIsOpen(!isOpen)} // <-- así!
-  onClose={() => setIsOpen(false)}
-  project={selectedProject}
-/>
-
+      <ProjectDrawer
+        isOpen={isOpen}
+        onOpenChange={() => setIsOpen(!isOpen)}
+        onClose={() => setIsOpen(false)}
+        project={selectedProject}
+      />
     </section>
   );
 }
