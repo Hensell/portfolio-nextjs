@@ -32,8 +32,8 @@ export default function ProjectSection() {
   };
 
   return (
-    <section className="w-full py-24 px-5 sm:px-12 bg-background text-foreground">
-      <h2 className="text-4xl md:text-5xl font-bold mb-10 text-center tracking-tight font-robotoSerif">
+    <section id="projects" className="w-full py-24 px-5 sm:px-12 bg-background text-foreground">
+      <h2 className="text-4xl md:text-5xl font-bold mb-10 text-center tracking-tight font-robotoSerif scroll-mt-24">
         <span className="text-primary">Projects</span> that actually matter
       </h2>
 
