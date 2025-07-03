@@ -1,4 +1,4 @@
-"use client";
+ "use client";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 
@@ -10,8 +10,9 @@ export default function App({ id }: AboutProps) {
   return (
     <section
       id={id}
-      className="flex flex-col items-center mt-36 mb-36 px-6 text-center"
+      className="flex flex-col items-center mt-16 px-6 text-center "
     >
+      
       <motion.p
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
@@ -27,6 +28,7 @@ export default function App({ id }: AboutProps) {
         />
       </motion.p>
 
+   
       <motion.h1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -37,6 +39,7 @@ export default function App({ id }: AboutProps) {
         <span className="block mt-2 md:mt-6">ESPINOZA</span>
       </motion.h1>
 
+   
       <motion.p
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}

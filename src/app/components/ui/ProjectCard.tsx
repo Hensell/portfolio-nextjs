@@ -1,76 +1,71 @@
 "use client";
-import { Chip } from "@heroui/react";
 import Image from "next/image";
-
-interface ProjectCardProps {
-  src: string;
-  alt: string;
-  text: string;
-  height?: string;
-  link: string;
-  labels: string[];
-  description: string;
-  onClick?: () => void;
-}
+import { motion } from "framer-motion";
 
 export default function ProjectCard({
   src,
   alt,
   text,
-  height = "120px",
+  link,
   labels,
   description,
+  featured = false,
   onClick,
-}: ProjectCardProps) {
+}: any) {
   return (
-    <div
+    <motion.div
+      whileHover={{ y: -8, scale: 1.03, boxShadow: "0 8px 32px rgba(0,0,0,0.13)" }}
+      className={`transition cursor-pointer bg-white/5 dark:bg-black/10
+        rounded-2xl overflow-hidden flex flex-col
+        ${featured ? "md:flex-row shadow-xl" : "shadow-md"}
+        hover:shadow-2xl`}
+      style={featured ? { minHeight: 340 } : {}}
       onClick={onClick}
-      className="cursor-pointer flex flex-col space-y-5 sm:flex-row justify-center transition duration-500 w-full p-2 rounded-lg bg-white/0 hover:bg-foreground/10 hover:backdrop-blur-md"
     >
-      <div className="relative overflow-hidden w-[300px]" style={{ height }}>
+      <div
+        className={`relative ${featured ? "md:w-2/3" : "w-full"} aspect-video min-h-[210px]`}
+      >
         <Image
           src={src}
           alt={alt}
           layout="fill"
           objectFit="cover"
-          className="z-0 transition duration-1000 hover:scale-110"
+          className="transition-all duration-500 group-hover:scale-105"
+          priority={featured}
         />
       </div>
 
-      <div className="ml-3 flex flex-col justify-between w-full">
-        <div className="px-1 space-y-1">
-          <p className="font-robotoSerif font-semibold text-base">{text}</p>
-          <p className="font-roboto font-extralight text-sm">
-            {description.length > 120 ? (
-              <>
-                {description.slice(0, 120)}
-                <span className="text-primary underline font-semibold ml-1 hover:opacity-80">
-                  ...click to view more
-                </span>
-              </>
-            ) : (
-              description
-            )}
-          </p>
-        </div>
-
-        <div className="flex flex-wrap gap-1 mt-2 px-1">
-          {labels.map((label, index) => (
-            <Chip
-              key={index}
-              size="sm"
-              radius="none"
-              variant="flat"
-              classNames={{
-                base: "bg-secondarybg",
-                content: "font-roboto font-normal",
-              }}
+      <div className={`p-6 flex flex-col gap-3 ${featured ? "md:w-1/3" : ""}`}>
+        <h3 className={`font-robotoSerif font-semibold text-lg md:text-2xl ${featured ? "text-primary" : ""}`}>
+          {text}
+        </h3>
+        <p className="text-foreground/80 text-sm md:text-base line-clamp-3">
+          {description}
+        </p>
+        <div className="flex flex-wrap gap-2 mt-2">
+          {labels.map((label: string, i: number) => (
+            <span
+              key={i}
+              className="px-3 py-1 text-xs font-semibold rounded bg-primary/10 text-primary"
             >
               {label}
-            </Chip>
+            </span>
           ))}
         </div>
+        {link && (
+          <div className="flex gap-3 mt-4">
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-4 py-2 rounded-md bg-primary text-background text-xs font-bold shadow transition hover:bg-primary/90"
+              onClick={e => e.stopPropagation()} // Para que el link no dispare el drawer
+            >
+              {featured ? "Check this project" : "View Project"}
+            </a>
+          </div>
+        )}
       </div>
-    </div>
+    </motion.div>
   );
 }
