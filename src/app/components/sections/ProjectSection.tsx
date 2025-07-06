@@ -2,12 +2,10 @@
 import { useState } from "react";
 import ProjectCard from "../ui/ProjectCard";
 import { projects } from "../data/projects";
-import ProjectDrawer from "../drawers/ProjectDrawer"; 
+import ProjectDrawer from "../drawers/ProjectDrawer";
 import type { ProjectData } from "../hooks/useProjectDrawer";
 
-const stacks = [
-  "All","Flutter", "Next.JS","Node.JS"
-];
+const stacks = ["All", "Flutter", "Next.JS", "Node.JS"];
 
 export default function ProjectSection() {
   const [filter, setFilter] = useState("All");
@@ -32,7 +30,10 @@ export default function ProjectSection() {
   };
 
   return (
-    <section id="projects" className="w-full py-24 px-5 sm:px-12 bg-background text-foreground">
+    <section
+      id="projects"
+      className="w-full py-24 px-5 sm:px-12 bg-background text-foreground"
+    >
       <h2 className="text-4xl md:text-5xl font-bold mb-10 text-center tracking-tight font-robotoSerif scroll-mt-24">
         <span className="text-primary">Projects</span> that actually matter
       </h2>
