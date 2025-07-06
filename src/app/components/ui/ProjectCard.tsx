@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import type { ProjectData } from "../hooks/useProjectDrawer";
+import { Chip } from "@heroui/react";
 
 type ProjectCardProps = ProjectData & {
   featured?: boolean;
@@ -15,6 +16,7 @@ export default function ProjectCard({
   link,
   labels,
   description,
+  private: isPrivate = false, // <-- nuevo nombre local
   featured = false,
   onClick,
 }: ProjectCardProps) {
@@ -25,7 +27,7 @@ export default function ProjectCard({
         scale: 1.03,
         boxShadow: "0 8px 32px rgba(0,0,0,0.13)",
       }}
-      className={`transition cursor-pointer bg-white/5 dark:bg-black/10
+      className={`transition cursor-pointer bg-white/5
         rounded-2xl overflow-hidden flex flex-col
         ${featured ? "md:flex-row shadow-xl" : "shadow-md"}
         hover:shadow-2xl`}
@@ -47,7 +49,11 @@ export default function ProjectCard({
         />
       </div>
 
-      <div className={`p-6 flex flex-col gap-3 ${featured ? "md:w-1/3" : ""}`}>
+      <div
+        className={`p-6 flex flex-col flex-1 gap-3 ${
+          featured ? "md:w-1/3" : ""
+        }`}
+      >
         <h3
           className={`font-robotoSerif font-semibold text-lg md:text-2xl ${
             featured ? "text-primary" : ""
@@ -55,32 +61,48 @@ export default function ProjectCard({
         >
           {text}
         </h3>
-        <p className="text-foreground/80 text-sm md:text-base line-clamp-3">
+        <p
+          className={`text-foreground/80 text-sm md:text-base ${
+            !featured && "line-clamp-3"
+          }`}
+        >
           {description}
         </p>
         <div className="flex flex-wrap gap-2 mt-2">
           {labels.map((label, i) => (
-            <span
+            <Chip
               key={i}
-              className="px-3 py-1 text-xs font-semibold rounded bg-primary/10 text-primary"
+              size="sm"
+              variant="flat"
+              classNames={{
+                base: "bg-secondarybg",
+                content: "font-roboto font-normal",
+              }}
             >
               {label}
-            </span>
+            </Chip>
           ))}
         </div>
-        {link && (
-          <div className="flex gap-3 mt-4">
+        {/* Botón o mensaje privado */}
+        {link ? (
+          <div className="flex gap-3 mt-auto">
             <a
               href={link}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-4 py-2 rounded-md bg-primary text-background text-xs font-bold shadow transition hover:bg-primary/90"
-              onClick={(e) => e.stopPropagation()} // Para que el link no dispare el drawer
+              onClick={(e) => e.stopPropagation()}
             >
-              {featured ? "Check this project" : "View Project"}
+              {link.includes("github.com")
+                ? "View code on GitHub"
+                : "View Project"}
             </a>
           </div>
-        )}
+        ) : isPrivate ? (
+          <div className="mt-auto text-xs italic text-foreground/60">
+            Private project (not publicly available)
+          </div>
+        ) : null}
       </div>
     </motion.div>
   );

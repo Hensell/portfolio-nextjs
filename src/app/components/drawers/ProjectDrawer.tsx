@@ -11,12 +11,14 @@ import {
 } from "@heroui/react";
 import Image from "next/image";
 import { ProjectData } from "../hooks/useProjectDrawer";
+
 interface ProjectDrawerProps {
   isOpen: boolean;
   onOpenChange: () => void;
   onClose: () => void;
   project: ProjectData | null;
 }
+// ...importaciones y tipos
 
 export default function ProjectDrawer({
   isOpen,
@@ -25,6 +27,7 @@ export default function ProjectDrawer({
   project,
 }: ProjectDrawerProps) {
   if (!project) return null;
+  const isPrivate = project.private ?? false;
 
   return (
     <Drawer
@@ -76,15 +79,23 @@ export default function ProjectDrawer({
               <Button color="default" variant="light" onPress={onClose}>
                 Close
               </Button>
-              <Button
-                as={Link}
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                color="primary"
-              >
-                Visit Project
-              </Button>
+              {project.link ? (
+                <Button
+                  as={Link}
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  color="primary"
+                >
+                  {project.link.includes("github.com")
+                    ? "View code on GitHub"
+                    : "View Project"}
+                </Button>
+              ) : isPrivate ? (
+                <span className="ml-2 text-xs italic text-foreground/60">
+                  Private project (not publicly available)
+                </span>
+              ) : null}
             </DrawerFooter>
           </>
         )}

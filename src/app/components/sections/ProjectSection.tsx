@@ -2,7 +2,7 @@
 import { useState } from "react";
 import ProjectCard from "../ui/ProjectCard";
 import { projects } from "../data/projects";
-import ProjectDrawer from "../drawers/ProjectDrawer"; // <- tu drawer
+import ProjectDrawer from "../drawers/ProjectDrawer"; 
 import type { ProjectData } from "../hooks/useProjectDrawer";
 
 const stacks = [
