@@ -1,4 +1,4 @@
- "use client";
+"use client";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 
@@ -6,60 +6,50 @@ type AboutProps = {
   id: string;
 };
 
-export default function App({ id }: AboutProps) {
+export default function AboutSection({ id }: AboutProps) {
   return (
     <section
       id={id}
-      className="flex flex-col items-center mt-16 px-6 text-center "
+      className="flex flex-col items-center justify-center min-h-[85vh] px-6 text-center relative"
     >
-      
-      <motion.p
+      {/* Animated gradient orbs */}
+      <div className="absolute top-20 left-1/4 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-20 right-1/4 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000" />
+
+      <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="font-light text-gray-700 dark:text-gray-300 text-sm md:text-base tracking-widest uppercase mb-4"
+        transition={{ duration: 0.8 }}
+        className="relative z-10"
       >
         <TypeAnimation
-          sequence={["PASSIONATE FULL STACK DEVELOPER", 1000]}
-          wrapper="span"
+          sequence={["FULL STACK DEVELOPER", 1000]}
+          wrapper="p"
           cursor={false}
           speed={80}
-          style={{ whiteSpace: "pre-line", display: "block" }}
+          className="font-sans font-medium text-primary text-sm md:text-base tracking-[0.3em] uppercase mb-6"
         />
-      </motion.p>
 
-   
-      <motion.h1
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.2 }}
-        className="font-robotoSerif text-5xl md:text-7xl font-normal leading-tight"
-      >
-        <span className="block">HENSELL</span>
-        <span className="block mt-2 md:mt-6">ESPINOZA</span>
-      </motion.h1>
+        <h1 className="font-display text-6xl md:text-8xl font-bold leading-tight mb-2">
+          <span className="block gradient-text">HENSELL</span>
+          <span className="block gradient-text mt-2">ESPINOZA</span>
+        </h1>
 
-   
-      <motion.p
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.4 }}
-        className="font-light text-gray-700 dark:text-gray-300 text-sm md:text-base mt-6 max-w-xl"
-      >
         <TypeAnimation
           sequence={["CREATING AMAZING WEB AND MOBILE EXPERIENCES", 2000]}
-          wrapper="span"
+          wrapper="p"
           cursor={false}
           speed={80}
-          style={{ whiteSpace: "pre-line", display: "block" }}
+          className="font-sans text-muted-foreground text-base md:text-lg mt-8 max-w-2xl mx-auto leading-relaxed"
         />
-      </motion.p>
-      <a
-        href="#contact"
-        className="inline-block mt-10 px-6 py-3 rounded-md bg-foreground text-background text-sm tracking-widest font-semibold hover:bg-foreground/90 transition-colors duration-300 shadow-md"
-      >
-        CONTACT ME
-      </a>
+
+        <a
+          href="#contact"
+          className="inline-block mt-12 px-8 py-4 rounded-full bg-gradient-to-r from-primary via-accent to-secondary text-white text-sm tracking-wider font-semibold hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:-translate-y-1"
+        >
+          LET&apos;S WORK TOGETHER
+        </a>
+      </motion.div>
     </section>
   );
 }

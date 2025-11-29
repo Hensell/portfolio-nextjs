@@ -12,7 +12,7 @@ export default function SkillsSection() {
         { label: "NEXT JS", url: "https://nextjs.org/" },
         { label: "FLUTTER", url: "https://flutter.dev/" },
         {
-          label: "JETPACK COMPOSE (KOTLIN)",
+          label: "JETPACK COMPOSE",
           url: "https://developer.android.com/jetpack/compose",
         },
         { label: "NODE JS", url: "https://nodejs.org/" },
@@ -26,7 +26,7 @@ export default function SkillsSection() {
       title: "TOOLS & RESOURCES",
       links: [
         {
-          label: "CLOUDFLARE PAGES & WORKERS",
+          label: "CLOUDFLARE",
           url: "https://www.cloudflare.com/",
         },
         { label: "FIREBASE", url: "https://firebase.google.com/" },
@@ -41,36 +41,45 @@ export default function SkillsSection() {
   ];
 
   return (
-    <section className="w-full px-4 sm:px-6 md:px-12 py-16 bg-background text-foreground">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 max-w-screen-xl mx-auto">
-        {sections.map((section, i) => (
-          <motion.div
-            key={section.title}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: i * 0.1 }}
-          >
-            <h2 className="text-sm font-semibold tracking-widest text-foreground/80 mb-6 uppercase">
-              {section.title}
-            </h2>
-            <div className="flex flex-wrap gap-3">
-              {section.links.map((link, j) => (
-                <motion.a
-                  key={j}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="px-4 py-2 rounded-full bg-secondary/50 border border-border/50 text-sm font-medium hover:bg-secondary hover:border-primary/20 transition-colors"
-                >
-                  {link.label}
-                </motion.a>
-              ))}
-            </div>
-          </motion.div>
-        ))}
+    <section className="w-full px-4 sm:px-6 md:px-12 py-24 bg-secondary-background/30">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="font-display text-4xl md:text-5xl font-bold gradient-text mb-4">
+            Skills & Tools
+          </h2>
+          <p className="text-muted-foreground text-lg">Technologies I work with</p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {sections.map((section, i) => (
+            <motion.div
+              key={section.title}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+            >
+              <h3 className="font-sans text-sm font-bold tracking-widest text-primary/80 mb-6 uppercase">
+                {section.title}
+              </h3>
+              <div className="flex flex-wrap gap-3">
+                {section.links.map((link, j) => (
+                  <motion.a
+                    key={j}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="px-5 py-2.5 rounded-full bg-gradient-to-r from-card to-secondary-background border border-border/50 text-sm font-medium hover:border-primary/30 hover:shadow-lg hover:shadow-primary/10 transition-all"
+                  >
+                    {link.label}
+                  </motion.a>
+                ))}
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

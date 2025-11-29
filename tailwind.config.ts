@@ -11,8 +11,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        roboto: ["var(--font-roboto-flex)", "sans-serif"],
-        robotoSerif: ["var(--font-roboto-serif)", "serif"],
+        sans: ["var(--font-inter)", "sans-serif"],
+        display: ["var(--font-space-grotesk)", "sans-serif"],
       },
       colors: {
         background: "hsl(var(--background))",

@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Roboto_Serif, Roboto_Flex } from "next/font/google";
+import { Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./providers/theme-provider";
 import "@/app/styles/theme-transition.css";
 
-const robotoSerif = Roboto_Serif({
-  variable: "--font-roboto-serif",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const robotoFlex = Roboto_Flex({
-  variable: "--font-roboto-flex",
+const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space-grotesk",
   subsets: ["latin"],
 });
 
@@ -30,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${robotoSerif.variable} ${robotoFlex.variable} antialiased`}
+        className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}
       >
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
           {children}
