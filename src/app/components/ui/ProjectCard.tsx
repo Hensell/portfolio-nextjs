@@ -79,7 +79,7 @@ export default function ProjectCard({
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-5 py-2.5 rounded-full bg-gradient-to-r from-primary to-accent text-white text-sm font-bold shadow-md hover:shadow-lg hover:shadow-primary/30 transition-all hover:-translate-y-0.5"
+              className="inline-flex items-center px-5 py-2.5 rounded-full bg-primary text-white text-sm font-bold shadow-md hover:shadow-lg hover:shadow-primary/30 transition-all hover:-translate-y-0.5 hover:bg-primary/90"
               onClick={(e) => e.stopPropagation()}
             >
               {link.includes("github.com")

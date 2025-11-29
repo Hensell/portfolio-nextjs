@@ -45,7 +45,7 @@ export default function AboutSection({ id }: AboutProps) {
 
         <a
           href="#contact"
-          className="inline-block mt-12 px-8 py-4 rounded-full bg-gradient-to-r from-primary via-accent to-secondary text-white text-sm tracking-wider font-semibold hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:-translate-y-1"
+          className="inline-block mt-12 px-8 py-4 rounded-full bg-primary text-white text-sm tracking-wider font-semibold hover:bg-primary/90 hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:-translate-y-1"
         >
           LET&apos;S WORK TOGETHER
         </a>

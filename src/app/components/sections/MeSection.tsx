@@ -61,7 +61,7 @@ export default function MeSection() {
             href="/doc/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="group px-8 py-4 rounded-full bg-gradient-to-r from-primary to-accent text-white font-semibold shadow-lg hover:shadow-2xl hover:shadow-primary/50 transition-all hover:-translate-y-1"
+            className="group px-8 py-4 rounded-full bg-primary text-white font-semibold shadow-lg hover:shadow-2xl hover:shadow-primary/50 transition-all hover:-translate-y-1 hover:bg-primary/90"
             aria-label="Download CV"
           >
             Download CV

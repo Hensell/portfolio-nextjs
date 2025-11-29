@@ -30,7 +30,7 @@ export default function ContactSection() {
 
                 <a
                     href="mailto:hensell@hensell.dev"
-                    className="inline-block px-10 py-5 rounded-full bg-gradient-to-r from-primary via-accent to-secondary text-white text-base font-bold tracking-wide hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:-translate-y-1 hover:scale-105"
+                    className="inline-block px-10 py-5 rounded-full bg-primary text-white text-base font-bold tracking-wide hover:shadow-2xl hover:shadow-primary/50 transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:bg-primary/90"
                 >
                     GET IN TOUCH
                 </a>

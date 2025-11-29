@@ -45,8 +45,8 @@ export default function ProjectSection() {
               key={s}
               onClick={() => setFilter(s)}
               className={`px-6 py-3 rounded-full text-sm font-semibold transition-all ${filter === s
-                ? "bg-gradient-to-r from-primary to-accent text-white shadow-lg shadow-primary/30"
-                : "bg-secondary-background border border-border/50 text-foreground/70 hover:border-primary/30 hover:shadow-md"
+                  ? "bg-primary text-white shadow-lg shadow-primary/30 hover:bg-primary/90"
+                  : "bg-secondary-background border border-border/50 text-foreground/70 hover:border-primary/30 hover:shadow-md"
                 }`}
             >
               {s}
