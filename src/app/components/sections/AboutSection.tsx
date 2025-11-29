@@ -30,9 +30,9 @@ export default function AboutSection({ id }: AboutProps) {
           className="font-sans font-medium text-primary text-sm md:text-base tracking-[0.3em] uppercase mb-6"
         />
 
-        <h1 className="font-display text-6xl md:text-8xl font-bold leading-tight mb-2">
-          <span className="block gradient-text">HENSELL</span>
-          <span className="block gradient-text mt-2">ESPINOZA</span>
+        <h1 className="font-display text-6xl md:text-8xl font-bold leading-tight mb-2 text-primary">
+          <span className="block">HENSELL</span>
+          <span className="block mt-2">ESPINOZA</span>
         </h1>
 
         <TypeAnimation

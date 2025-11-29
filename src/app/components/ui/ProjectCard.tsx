@@ -52,7 +52,7 @@ export default function ProjectCard({
           }`}
       >
         <h3
-          className={`font-display font-bold ${featured ? "text-3xl gradient-text" : "text-2xl text-foreground"
+          className={`font-display font-bold ${featured ? "text-3xl text-primary" : "text-2xl text-foreground"
             }`}
         >
           {text}

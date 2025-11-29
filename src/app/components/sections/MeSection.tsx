@@ -42,11 +42,11 @@ export default function MeSection() {
         <div className="mb-3 text-xs font-bold tracking-widest uppercase text-primary">
           About Me
         </div>
-        <h2 className="font-display text-4xl md:text-6xl font-bold mb-6 leading-tight">
-          <span className="gradient-text">Hensell Espinoza</span>
+        <h2 className="font-display text-4xl md:text-6xl font-bold mb-6 leading-tight text-primary">
+          Hensell Espinoza
         </h2>
         <div className="mb-4 text-lg md:text-xl text-foreground/80 font-normal leading-relaxed">
-          <span className="font-semibold gradient-text">
+          <span className="font-semibold text-primary">
             Full Stack Engineer
           </span>{" "}
           based in Nicaragua — building scalable products for web & mobile using{" "}

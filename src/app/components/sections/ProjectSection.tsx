@@ -34,7 +34,7 @@ export default function ProjectSection() {
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-display text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            <span className="gradient-text">Projects</span> that actually matter
+            <span className="text-primary">Projects</span> that actually matter
           </h2>
           <p className="text-muted-foreground text-lg">Real-world solutions I&apos;ve built</p>
         </div>

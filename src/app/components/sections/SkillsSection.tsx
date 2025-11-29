@@ -44,7 +44,7 @@ export default function SkillsSection() {
     <section className="w-full px-4 sm:px-6 md:px-12 py-24 bg-secondary-background/30">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-display text-4xl md:text-5xl font-bold gradient-text mb-4">
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-primary mb-4">
             Skills & Tools
           </h2>
           <p className="text-muted-foreground text-lg">Technologies I work with</p>

@@ -19,7 +19,7 @@ export default function ContactSection() {
             >
                 <h2 className="font-display text-4xl md:text-6xl font-bold mb-8 leading-snug">
                     Let&apos;s build something{" "}
-                    <span className="gradient-text">amazing</span> together.
+                    <span className="text-accent">amazing</span> together.
                 </h2>
 
                 <p className="text-lg md:text-xl text-foreground/70 max-w-2xl mx-auto mb-12 leading-relaxed">
