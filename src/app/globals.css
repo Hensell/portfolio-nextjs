@@ -14,62 +14,80 @@ body {
   :root {
     --font-inter: "Inter", sans-serif;
     --font-space-grotesk: "Space Grotesk", sans-serif;
+
+    /* Unified Green Palette - Light Mode */
     --background: 0 0% 98%;
-    --secondary-background: 220 14% 96%;
-    --foreground: 222 47% 11%;
+    --secondary-background: 150 20% 96%;
+    --foreground: 150 10% 15%;
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 150 10% 15%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
-    --primary: 217 91% 60%;
+    --popover-foreground: 150 10% 15%;
+
+    /* Green Primary Color */
+    --primary: 150 65% 45%;
     --primary-foreground: 0 0% 100%;
-    --secondary: 189 94% 43%;
+
+    /* Teal Secondary Color */
+    --secondary: 175 60% 50%;
     --secondary-foreground: 0 0% 100%;
-    --accent: 262 83% 58%;
+
+    /* Emerald Accent Color */
+    --accent: 160 84% 39%;
     --accent-foreground: 0 0% 100%;
-    --muted: 220 14% 96%;
-    --muted-foreground: 215 16% 47%;
+
+    --muted: 150 20% 96%;
+    --muted-foreground: 150 10% 45%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 217 91% 60%;
-    --chart-1: 217 91% 60%;
-    --chart-2: 262 83% 58%;
-    --chart-3: 189 94% 43%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --border: 150 15% 88%;
+    --input: 150 15% 88%;
+    --ring: 150 65% 45%;
+    --chart-1: 150 65% 45%;
+    --chart-2: 160 84% 39%;
+    --chart-3: 175 60% 50%;
+    --chart-4: 140 70% 50%;
+    --chart-5: 165 75% 45%;
     --radius: 0.75rem;
   }
 
   .dark {
     --font-inter: "Inter", sans-serif;
     --font-space-grotesk: "Space Grotesk", sans-serif;
-    --background: 222 47% 11%;
-    --secondary-background: 217 33% 17%;
-    --foreground: 210 40% 98%;
-    --card: 217 33% 17%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222 47% 11%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 217 91% 70%;
-    --primary-foreground: 222 47% 11%;
-    --secondary: 189 94% 53%;
-    --secondary-foreground: 222 47% 11%;
-    --accent: 262 83% 68%;
-    --accent-foreground: 222 47% 11%;
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
+
+    /* Unified Green Palette - Dark Mode */
+    --background: 150 15% 8%;
+    --secondary-background: 150 12% 12%;
+    --foreground: 150 10% 95%;
+    --card: 150 12% 12%;
+    --card-foreground: 150 10% 95%;
+    --popover: 150 15% 8%;
+    --popover-foreground: 150 10% 95%;
+
+    /* Green Primary Color - Lighter for dark mode */
+    --primary: 150 60% 55%;
+    --primary-foreground: 150 15% 8%;
+
+    /* Teal Secondary Color - Lighter for dark mode */
+    --secondary: 175 55% 60%;
+    --secondary-foreground: 150 15% 8%;
+
+    /* Emerald Accent Color - Lighter for dark mode */
+    --accent: 160 80% 50%;
+    --accent-foreground: 150 15% 8%;
+
+    --muted: 150 12% 12%;
+    --muted-foreground: 150 10% 65%;
     --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 217 91% 70%;
-    --chart-1: 217 91% 70%;
-    --chart-2: 262 83% 68%;
-    --chart-3: 189 94% 53%;
-    --chart-4: 280 65% 70%;
-    --chart-5: 340 75% 65%;
+    --destructive-foreground: 150 10% 95%;
+    --border: 150 12% 18%;
+    --input: 150 12% 18%;
+    --ring: 150 60% 55%;
+    --chart-1: 150 60% 55%;
+    --chart-2: 160 80% 50%;
+    --chart-3: 175 55% 60%;
+    --chart-4: 140 65% 60%;
+    --chart-5: 165 70% 55%;
   }
 }
 
@@ -81,18 +99,18 @@ body {
   body {
     @apply bg-background text-foreground;
     background-image:
-      radial-gradient(at 27% 37%, hsla(215, 98%, 61%, 0.08) 0px, transparent 50%),
-      radial-gradient(at 97% 21%, hsla(262, 83%, 58%, 0.08) 0px, transparent 50%),
-      radial-gradient(at 52% 99%, hsla(189, 94%, 43%, 0.08) 0px, transparent 50%),
-      radial-gradient(at 10% 29%, hsla(256, 96%, 67%, 0.08) 0px, transparent 50%),
-      radial-gradient(at 97% 96%, hsla(217, 91%, 60%, 0.08) 0px, transparent 50%),
-      radial-gradient(at 33% 50%, hsla(222, 67%, 73%, 0.08) 0px, transparent 50%),
-      radial-gradient(at 79% 53%, hsla(343, 68%, 79%, 0.08) 0px, transparent 50%);
+      radial-gradient(at 27% 37%, hsla(150, 65%, 45%, 0.08) 0px, transparent 50%),
+      radial-gradient(at 97% 21%, hsla(160, 84%, 39%, 0.08) 0px, transparent 50%),
+      radial-gradient(at 52% 99%, hsla(175, 60%, 50%, 0.08) 0px, transparent 50%),
+      radial-gradient(at 10% 29%, hsla(140, 70%, 50%, 0.08) 0px, transparent 50%),
+      radial-gradient(at 97% 96%, hsla(150, 65%, 45%, 0.08) 0px, transparent 50%),
+      radial-gradient(at 33% 50%, hsla(155, 60%, 50%, 0.08) 0px, transparent 50%),
+      radial-gradient(at 79% 53%, hsla(165, 65%, 48%, 0.08) 0px, transparent 50%);
     background-attachment: fixed;
   }
 }
 
-/* Gradient Text Utility */
+/* Gradient Text Utility (keeping for potential future use) */
 @layer utilities {
   .gradient-text {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-secondary;
@@ -129,10 +147,10 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, hsl(var(--primary)), hsl(var(--accent)));
+  background: hsl(var(--primary) / 0.6);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, hsl(var(--accent)), hsl(var(--secondary)));
+  background: hsl(var(--primary) / 0.8);
 }
