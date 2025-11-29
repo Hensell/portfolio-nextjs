@@ -5,7 +5,10 @@ import ToggleTheme from "./ToggleTheme";
 
 export default function App() {
   return (
-    <Navbar>
+    <Navbar
+      className="backdrop-blur-md bg-background/70 border-b border-border/40 fixed top-0 z-50"
+      maxWidth="xl"
+    >
       <NavbarContent justify="center">
         <NavbarItem>
           <Link

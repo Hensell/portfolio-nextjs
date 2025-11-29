@@ -24,20 +24,19 @@ export default function ProjectCard({
     <motion.div
       whileHover={{
         y: -8,
-        scale: 1.03,
-        boxShadow: "0 8px 32px rgba(0,0,0,0.13)",
+        scale: 1.02,
+        boxShadow: "0 20px 40px -10px rgba(0,0,0,0.15)",
       }}
-      className={`transition cursor-pointer bg-white/5
+      className={`transition cursor-pointer bg-card/50 backdrop-blur-sm border border-border/50
         rounded-2xl overflow-hidden flex flex-col
         ${featured ? "md:flex-row shadow-xl" : "shadow-md"}
-        hover:shadow-2xl`}
+        hover:shadow-2xl group`}
       style={featured ? { minHeight: 340 } : {}}
       onClick={onClick}
     >
       <div
-        className={`relative ${
-          featured ? "md:w-2/3" : "w-full"
-        } aspect-video min-h-[210px]`}
+        className={`relative ${featured ? "md:w-2/3" : "w-full"
+          } aspect-video min-h-[210px]`}
       >
         <Image
           src={src}
@@ -50,21 +49,18 @@ export default function ProjectCard({
       </div>
 
       <div
-        className={`p-6 flex flex-col flex-1 gap-3 ${
-          featured ? "md:w-1/3" : ""
-        }`}
+        className={`p-6 flex flex-col flex-1 gap-3 ${featured ? "md:w-1/3" : ""
+          }`}
       >
         <h3
-          className={`font-robotoSerif font-semibold text-lg md:text-2xl ${
-            featured ? "text-primary" : ""
-          }`}
+          className={`font-robotoSerif font-semibold text-lg md:text-2xl ${featured ? "text-primary" : ""
+            }`}
         >
           {text}
         </h3>
         <p
-          className={`text-foreground/80 text-sm md:text-base ${
-            !featured && "line-clamp-3"
-          }`}
+          className={`text-foreground/80 text-sm md:text-base ${!featured && "line-clamp-3"
+            }`}
         >
           {description}
         </p>

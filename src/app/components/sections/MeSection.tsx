@@ -5,7 +5,10 @@ import Image from "next/image";
 
 export default function AboutSection() {
   return (
-    <section className="w-full px-6 md:px-12 py-24 flex flex-col md:flex-row items-center gap-14 md:gap-24">
+    <section className="w-full px-6 md:px-12 py-24 flex flex-col md:flex-row items-center gap-14 md:gap-24 relative overflow-hidden">
+      {/* Background Blob */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl -z-10 pointer-events-none" />
+
       {/* Imagen con glow sutil */}
       <motion.div
         initial={{ opacity: 0, scale: 0.93 }}
@@ -39,7 +42,7 @@ export default function AboutSection() {
           Hensell Espinoza
         </h2>
         <div className="mb-3 text-base md:text-lg text-gray-700 dark:text-gray-300 font-normal leading-relaxed">
-          <span className="font-semibold text-primary">
+          <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/60">
             Full Stack Engineer
           </span>{" "}
           based in Nicaragua — building scalable products for web & mobile using{" "}
@@ -54,14 +57,14 @@ export default function AboutSection() {
             href="/doc/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2 rounded-md bg-primary text-background font-semibold shadow transition hover:bg-primary/80"
+            className="px-6 py-3 rounded-full bg-primary text-background font-semibold shadow-lg hover:shadow-xl transition-all hover:-translate-y-1"
             aria-label="Download CV"
           >
             Download CV
           </a>
           <a
             href="mailto:hensell@hensell.dev"
-            className="px-5 py-2 rounded-md border border-primary/40 text-primary font-semibold shadow-sm transition hover:bg-primary hover:text-background"
+            className="px-6 py-3 rounded-full border border-primary/20 bg-background/50 backdrop-blur-sm text-primary font-semibold shadow-sm transition-all hover:bg-primary/5 hover:border-primary/40"
             aria-label="Contact Hensell by email"
           >
             Let’s Connect

@@ -1,9 +1,8 @@
 "use client";
 
-import LinkComponent from "../ui/LinkComponent";
 import { motion } from "framer-motion";
 
-export default function App() {
+export default function SkillsSection() {
   const sections = [
     {
       title: "SKILLS",
@@ -55,9 +54,19 @@ export default function App() {
             <h2 className="text-sm font-semibold tracking-widest text-foreground/80 mb-6 uppercase">
               {section.title}
             </h2>
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-wrap gap-3">
               {section.links.map((link, j) => (
-                <LinkComponent key={j} label={link.label} url={link.url} />
+                <motion.a
+                  key={j}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-4 py-2 rounded-full bg-secondary/50 border border-border/50 text-sm font-medium hover:bg-secondary hover:border-primary/20 transition-colors"
+                >
+                  {link.label}
+                </motion.a>
               ))}
             </div>
           </motion.div>
