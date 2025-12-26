@@ -11,14 +11,14 @@ export default function PrivacyPolicy() {
             <div className="space-y-6">
                 <section>
                     <p>
-                        Hensell Espinoza built the &quot;Bullet journal - frog happy&quot;
-                        app as a Free app. This SERVICE is provided by Hensell Espinoza at
-                        no cost and is intended for use as is.
+                        This privacy policy describes how &quot;Prestazo&quot; handles
+                        user information. This SERVICE is provided at no cost and is
+                        intended for use as is.
                     </p>
                     <p className="mt-2">
-                        This page is used to inform visitors regarding my policies with the
-                        collection, use, and disclosure of Personal Information if anyone
-                        decided to use my Service.
+                        This page is used to inform visitors regarding my policies with
+                        the collection, use, and disclosure of Personal Information if
+                        anyone decided to use my Service.
                     </p>
                 </section>
 
@@ -28,7 +28,7 @@ export default function PrivacyPolicy() {
                     </h2>
                     <p>
                         I do not collect, use, save, or have access to any of your personal
-                        data recorded in &quot;Bullet journal - frog happy&quot;.
+                        data recorded in &quot;Prestazo&quot;.
                     </p>
                     <p className="mt-2">
                         Individual settings and data are stored only on your device. You can
@@ -82,7 +82,7 @@ export default function PrivacyPolicy() {
                 </section>
 
                 <section>
-                    <h2 className="text-xl font-semibold mb-2">Children’s Privacy</h2>
+                    <h2 className="text-xl font-semibold mb-2">Children&apos;s Privacy</h2>
                     <p>
                         These Services do not address anyone under the age of 13. I do not
                         knowingly collect personally identifiable information from children
@@ -107,7 +107,7 @@ export default function PrivacyPolicy() {
                     <h2 className="text-xl font-semibold mb-2">Contact Us</h2>
                     <p>
                         If you have any questions or suggestions about my Privacy Policy, do
-                        not hesitate to contact me at henselldev@gmail.com.
+                        not hesitate to contact me at reynaldv12@gmail.com.
                     </p>
                 </section>
             </div>
