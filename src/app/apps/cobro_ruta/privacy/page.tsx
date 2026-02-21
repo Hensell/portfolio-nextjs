@@ -5,13 +5,13 @@ export default function PrivacyPolicy() {
         <div className="container mx-auto px-4 py-8 max-w-3xl">
             <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
             <p className="mb-4 text-sm text-muted-foreground">
-                Last updated: January 31, 2026
+                Last updated: February 21, 2026
             </p>
 
             <div className="space-y-6">
                 <section>
                     <p>
-                        This privacy policy describes how &quot;Lugar App&quot; handles
+                        This privacy policy describes how &quot;Cobro Ruta&quot; handles
                         user information. This SERVICE is provided at no cost and is
                         intended for use as is.
                     </p>
@@ -28,7 +28,7 @@ export default function PrivacyPolicy() {
                     </h2>
                     <p>
                         I do not collect, use, save, or have access to any of your personal
-                        data recorded in &quot;Lugar App&quot;.
+                        data recorded in &quot;Cobro Ruta&quot;.
                     </p>
                     <p className="mt-2">
                         Individual settings and data are stored only on your device. You can
@@ -100,7 +100,7 @@ export default function PrivacyPolicy() {
                         notify you of any changes by posting the new Privacy Policy on this
                         page.
                     </p>
-                    <p className="mt-2">This policy is effective as of 2026-01-31</p>
+                    <p className="mt-2">This policy is effective as of 2026-02-21</p>
                 </section>
 
                 <section>
